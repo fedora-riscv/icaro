@@ -1,8 +1,8 @@
-%global commit	4393eb003d492922671664097d30e7258ea5db32
+%global commit	51a13c67d8d06a781b756bda68b8578f56167034
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
-Version:	1.0
-Release:	3%{?dist}
+Version:	1.0.1
+Release:	1%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -221,8 +221,11 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/26-microchip.rules
 %config(noreplace) %{_sysconfdir}/udev/rules.d/41-microchip.rules
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-serial.rules
-
+%config(noreplace) %{_sysconfdir}/udev/rules.d/026-microchip.rules
 %changelog
+* Sat Mar 30 2013 Eduardo Echeverria <echevemaster@gmail.com> - 1.0.1-1
+- Updated to the new upstream version
+
 * Sat Mar 09 2013 Eduardo Echeverria <echevemaster@gmail.com> - 1.0-3
 - Added license LGPLv2 for the firmware
 - Add missing requires
