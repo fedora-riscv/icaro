@@ -1,7 +1,7 @@
-%global commit	51a13c67d8d06a781b756bda68b8578f56167034
+%global commit	74e2829b791e5b5a4a86e5278a7a4313161758d3
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
-Version:	1.0.1
+Version:	1.0.2
 Release:	1%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
@@ -16,7 +16,8 @@ BuildArch:	noarch
 BuildRequires:	python2-devel
 BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
-Requires:	pygame
+Requires:	pycairo
+Requires:	pygtk2
 Requires:	pywebkitgtk
 Requires:	pygtksourceview
 Requires:	sdcc
@@ -62,6 +63,7 @@ install -p -m 0644 {*.py,*.xml,*.dat,version} %{buildroot}%{_datadir}/%{name}/
 # Remove po and pot files
 find %{buildroot} -name "*.po" | xargs rm -f
 find %{buildroot} -name "*.pot" | xargs rm -f
+find %{buildroot} -name "#template.pde#" | xargs rm -f
 
 
 %find_lang %{name}
@@ -181,7 +183,6 @@ fi
 %dir %{_datadir}/%{name}/pic16/np05
 %dir %{_datadir}/%{name}/pic16/np05/source
 %{_datadir}/%{name}/pic16/np05/source/*.c
-%{_datadir}/%{name}/pic16/np05/source/*.h
 %{_datadir}/%{name}/pic16/np05/source/*.pde
 
 %dir %{_datadir}/%{name}/pic16/np05/temporal
@@ -222,7 +223,12 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/41-microchip.rules
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-serial.rules
 %config(noreplace) %{_sysconfdir}/udev/rules.d/026-microchip.rules
+
 %changelog
+* Sat Jun 8 2013 Eduardo Echeverria <echevemaster@gmail.com> - 1.0.2-1
+- Updated to the new upstream version 1.0.2
+- Switch from pygame to pycairo
+
 * Sat Mar 30 2013 Eduardo Echeverria <echevemaster@gmail.com> - 1.0.1-1
 - Updated to the new upstream version
 
