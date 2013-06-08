@@ -244,5 +244,5 @@ fi
 - Fix permissions
 - Clean spec
 
-* Thu Sep 28 2012 Yader Velasquez <yaderv@fedoraproject.org> - 1.0-1
+* Fri Sep 28 2012 Yader Velasquez <yaderv@fedoraproject.org> - 1.0-1
 - First Initial Packaging
