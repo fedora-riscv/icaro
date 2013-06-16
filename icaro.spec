@@ -1,8 +1,14 @@
-%global commit	74e2829b791e5b5a4a86e5278a7a4313161758d3
+%if 0%{?fedora} >= 18
+%global activity TurtleBlocks.activity
+%else
+%global activity TurtleArt.activity
+%endif
+
+%global commit	f322157289c7e9aad480c4ec73f77f0f7673dd9c
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.2
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -35,6 +41,12 @@ and programming fundamentals.
 
 %prep
 %setup -q -n %{name}-%{commit}
+
+# sugar-turtleart change paths
+%if 0%{?fedora} >= 18
+sed -i -e 's/TurtleArt.activity/TurtleBlocks.activity/' config.dat 
+%endif
+
 
 # copy README.ENG file to sources as well.
 cp -a %{SOURCE1} .
@@ -69,10 +81,10 @@ find %{buildroot} -name "#template.pde#" | xargs rm -f
 %find_lang %{name}
 
 # Tortucaro plugin for sugar
-mkdir -p %{buildroot}%{sugaractivitydir}/TurtleArt.activity/plugins/icaro/
-cp -a plugintortucaro/icaro/* %{buildroot}%{sugaractivitydir}/TurtleArt.activity/plugins/icaro/
-mkdir -p %{buildroot}%{sugaractivitydir}/TurtleArt.activity/plugins/icaro/icons
-cp -a plugintortucaro/icaro/icons/* %{buildroot}%{sugaractivitydir}/TurtleArt.activity/plugins/icaro/icons
+mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/
+cp -a plugintortucaro/icaro/* %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/
+mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/icons
+cp -a plugintortucaro/icaro/icons/* %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/icons
 
 
 mkdir -p %{buildroot}%{_sysconfdir}/udev/rules.d/
@@ -208,11 +220,11 @@ fi
 
 # This is not sugar activity, is a plugin for turtleart
 # At present yet not there are Fedora guidelines for plugins.
-%dir %{sugaractivitydir}/TurtleArt.activity/plugins/icaro/
-%{sugaractivitydir}/TurtleArt.activity/plugins/icaro/*.py*
+%dir %{sugaractivitydir}/%{activity}/plugins/icaro/
+%{sugaractivitydir}/%{activity}/plugins/icaro/*.py*
 
-%dir %{sugaractivitydir}/TurtleArt.activity/plugins/icaro/icons/
-%{sugaractivitydir}/TurtleArt.activity/plugins/icaro/icons/*.svg
+%dir %{sugaractivitydir}/%{activity}/plugins/icaro/icons/
+%{sugaractivitydir}/%{activity}/plugins/icaro/icons/*.svg
 
 %{python_sitelib}/apicaro*egg*
 %{python_sitelib}/apicaro/
@@ -225,6 +237,9 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/026-microchip.rules
 
 %changelog
+* Sat Jun 8 2013 Eduardo Echeverria <echevemaster@gmail.com> - 1.0.2-2
+- Fix issues with paths
+
 * Sat Jun 8 2013 Eduardo Echeverria <echevemaster@gmail.com> - 1.0.2-1
 - Updated to the new upstream version 1.0.2
 - Switch from pygame to pycairo
