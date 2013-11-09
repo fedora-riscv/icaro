@@ -4,11 +4,11 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit	f322157289c7e9aad480c4ec73f77f0f7673dd9c
+%global commit	b27f86f146d3b17e71e022ab8caf461a45d689a8
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
-Version:	1.0.2
-Release:	3%{?dist}
+Version:	1.0.3
+Release:	1%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -69,7 +69,7 @@ python apicaro/setup.py install --root %{buildroot}
 # ------------- Icaro ---------------------------------------
 mkdir -p %{buildroot}%{_datadir}/%{name}/
 
-cp -p -a  {componente,imagenes,locale,ejemplos,pic16} %{buildroot}%{_datadir}/%{name}/
+cp -p -a  {componentes,imagenes,locale,ejemplo,pic16} %{buildroot}%{_datadir}/%{name}/
 install -p -m 0644 {*.py,*.xml,*.dat,version} %{buildroot}%{_datadir}/%{name}/
 
 # Remove po and pot files
@@ -160,8 +160,8 @@ fi
 %{_datadir}/%{name}/*.dat
 %{_datadir}/%{name}/version
 
-%dir %{_datadir}/%{name}/componente
-%{_datadir}/%{name}/componente/*
+%dir %{_datadir}/%{name}/componentes
+%{_datadir}/%{name}/componentes/*
 
 %dir %{_datadir}/%{name}/imagenes
 %{_datadir}/%{name}/imagenes/*.png
@@ -176,8 +176,8 @@ fi
 %{_datadir}/%{name}/imagenes/mouse/*.png
 %{_datadir}/%{name}/imagenes/mouse/*.svg
 
-%dir %{_datadir}/%{name}/ejemplos
-%{_datadir}/%{name}/ejemplos/*
+%dir %{_datadir}/%{name}/ejemplo
+%{_datadir}/%{name}/ejemplo/*
 
 # Pinguino Firmware
 # Exception granted by fpc
@@ -197,25 +197,27 @@ fi
 %{_datadir}/%{name}/pic16/np05/source/*.c
 %{_datadir}/%{name}/pic16/np05/source/*.pde
 
-%dir %{_datadir}/%{name}/pic16/np05/temporal
-%{_datadir}/%{name}/pic16/np05/temporal/*.asm
-%{_datadir}/%{name}/pic16/np05/temporal/*.cod
-%{_datadir}/%{name}/pic16/np05/temporal/*.hex
-%{_datadir}/%{name}/pic16/np05/temporal/*.lst
-%{_datadir}/%{name}/pic16/np05/temporal/*.map
-%{_datadir}/%{name}/pic16/np05/temporal/*.o
+%dir %{_datadir}/%{name}/pic16/np05/non-free/include/pic16
+%{_datadir}/%{name}/pic16/np05/non-free/include/pic16/*.h
 
-%dir %{_datadir}/%{name}/pic16/obj
-%{_datadir}/%{name}/pic16/obj/*.o
+%dir %{_datadir}/%{name}/pic16/np05/non-free/lib/pic16
+%{_datadir}/%{name}/pic16/np05/non-free/lib/pic16/*.lib
 
 %dir %{_datadir}/%{name}/pic16/np05/tmp
 %{_datadir}/%{name}/pic16/np05/tmp/*.c
 %{_datadir}/%{name}/pic16/np05/tmp/*.h
-%{_datadir}/%{name}/pic16/np05/tmp/stdout
 
 %dir %{_datadir}/%{name}/pic16/np05/tmp/usb
 %{_datadir}/%{name}/pic16/np05/tmp/usb/*.c
 %{_datadir}/%{name}/pic16/np05/tmp/usb/*.h
+
+
+%dir %{_datadir}/%{name}/pic16/np05/temporal
+%{_datadir}/%{name}/pic16/np05/temporal/*.dat
+%{_datadir}/%{name}/pic16/np05/tmp/stdout
+
+%dir %{_datadir}/%{name}/pic16/obj
+%{_datadir}/%{name}/pic16/obj/*.o
 
 
 # This is not sugar activity, is a plugin for turtleart
@@ -237,6 +239,9 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/026-microchip.rules
 
 %changelog
+* Fri Nov 08 2013 Eduardo Echeverria <echevemaster@gmail.com>  - 1.0.3-1
+- Bump to the new upstream version
+
 * Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.2-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 
