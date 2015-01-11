@@ -1,20 +1,21 @@
+%global  __os_install_post %{nil}
 %if 0%{?fedora} >= 18
 %global activity TurtleBlocks.activity
 %else
 %global activity TurtleArt.activity
 %endif
 
-%global commit	b27f86f146d3b17e71e022ab8caf461a45d689a8
+%global commit	63f1e02524dc43150e15f4927f5ba7248381de1d
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
-Version:	1.0.3
-Release:	2%{?dist}
+Version:	1.0.4
+Release:	1%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
-Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{version}-%{shortcommit}.tar.gz
+Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
@@ -34,6 +35,7 @@ Requires:	sugar-turtleart
 Requires:	pyserial
 Requires:	sugar
 Requires:	hicolor-icon-theme
+Requires:	gnome-python2-rsvg
 
 %description
 An educational robotic software aimed to develop robotic 
@@ -63,7 +65,7 @@ chmod -v 0644 README COPYING AUTHORS COPYING-LGPLv2
 %install
 # ------------- Apicaro -------------------------------------
 
-python apicaro/setup.py install --root %{buildroot}
+%{__python2} apicaro/setup.py install --root %{buildroot}
 
 
 # ------------- Icaro ---------------------------------------
@@ -175,6 +177,7 @@ fi
 %dir %{_datadir}/%{name}/imagenes/mouse
 %{_datadir}/%{name}/imagenes/mouse/*.png
 %{_datadir}/%{name}/imagenes/mouse/*.svg
+%{_datadir}/%{name}/imagenes/gif/*.gif
 
 %dir %{_datadir}/%{name}/ejemplo
 %{_datadir}/%{name}/ejemplo/*
@@ -212,8 +215,7 @@ fi
 %{_datadir}/%{name}/pic16/np05/tmp/usb/*.h
 
 
-%dir %{_datadir}/%{name}/pic16/np05/temporal
-%{_datadir}/%{name}/pic16/np05/temporal/*.dat
+%{_datadir}/%{name}/pic16/np05/temporal/
 %{_datadir}/%{name}/pic16/np05/tmp/stdout
 
 %dir %{_datadir}/%{name}/pic16/obj
@@ -239,6 +241,9 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/026-microchip.rules
 
 %changelog
+* Sat Jan 10 2015 Eduardo Echeverria <echevemaster@gmail.com>  - 1.0.4-1
+- Bump to the new upstream version
+
 * Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.3-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
