@@ -5,17 +5,17 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit	63f1e02524dc43150e15f4927f5ba7248381de1d
+%global commit 89db1132864b0b7e815cdbba0e87e5902de35bc2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
-Version:	1.0.4
-Release:	3%{?dist}
+Version:	1.0.5
+Release:	1%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
-Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
+Source0:	https://github.com/valentinbasel/icaro/archive/89db1132864b0b7e815cdbba0e87e5902de35bc2/icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
@@ -36,6 +36,7 @@ Requires:	pyserial
 Requires:	sugar
 Requires:	hicolor-icon-theme
 Requires:	gnome-python2-rsvg
+Requires:	vte
 
 %description
 An educational robotic software aimed to develop robotic 
@@ -45,19 +46,21 @@ and programming fundamentals.
 %setup -q -n %{name}-%{commit}
 
 # sugar-turtleart change paths
-%if 0%{?fedora} >= 18
-sed -i -e 's/TurtleArt.activity/TurtleBlocks.activity/' config.dat 
-%endif
+#%if 0%{?fedora} >= 18
+#sed -i -e 's/TurtleArt.activity/TurtleBlocks.activity/' config.dat 
+#%endif
 
 
 # copy README.ENG file to sources as well.
-cp -a %{SOURCE1} .
+#cp -a %{SOURCE1} .
 
 #empty files
-echo "# Just a comment" > pic16/np05/tmp/stdout
+#echo "# Just a comment" > pic16/np05/tmp/stdout
 
 # fix spurious permissions in this files
-chmod -v 0644 README COPYING AUTHORS COPYING-LGPLv2
+#chmod -v 0644 README.md COPYING AUTHORS COPYING-LGPLv2
+chmod -v 0644 COPYING AUTHORS COPYING-LGPLv2
+
 
 %build
 #Nothing to build
@@ -71,8 +74,8 @@ chmod -v 0644 README COPYING AUTHORS COPYING-LGPLv2
 # ------------- Icaro ---------------------------------------
 mkdir -p %{buildroot}%{_datadir}/%{name}/
 
-cp -p -a  {componentes,imagenes,locale,ejemplo,pic16} %{buildroot}%{_datadir}/%{name}/
-install -p -m 0644 {*.py,*.xml,*.dat,version} %{buildroot}%{_datadir}/%{name}/
+cp -p -a  {hardware,imagenes,locale,paletas,clemente} %{buildroot}%{_datadir}/%{name}/
+install -p -m 0644 {*.py,version} %{buildroot}%{_datadir}/%{name}/
 
 # Remove po and pot files
 find %{buildroot} -name "*.po" | xargs rm -f
@@ -155,18 +158,24 @@ fi
 
 
 %files -f %{name}.lang
-%doc README README.ENG COPYING AUTHORS COPYING-LGPLv2
+%doc COPYING AUTHORS COPYING-LGPLv2 
+#README.ENG 
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*.py*
-%{_datadir}/%{name}/*.xml
-%{_datadir}/%{name}/*.dat
 %{_datadir}/%{name}/version
-
-%dir %{_datadir}/%{name}/componentes
-%{_datadir}/%{name}/componentes/*
+%dir %{_datadir}/%{name}/hardware/icaro/componentes
+%{_datadir}/%{name}/hardware/icaro/componentes/*
 
 %dir %{_datadir}/%{name}/imagenes
 %{_datadir}/%{name}/imagenes/*.png
+
+%dir %{_datadir}/%{name}/clemente
+%{_datadir}/%{name}/clemente/*.py
+
+
+
+%dir %{_datadir}/%{name}/paletas
+%{_datadir}/%{name}/paletas/*.gpl
 
 %dir %{_datadir}/%{name}/imagenes/componentes
 %{_datadir}/%{name}/imagenes/componentes/*.png
@@ -179,47 +188,71 @@ fi
 %{_datadir}/%{name}/imagenes/mouse/*.svg
 %{_datadir}/%{name}/imagenes/gif/*.gif
 
-%dir %{_datadir}/%{name}/ejemplo
-%{_datadir}/%{name}/ejemplo/*
+%dir %{_datadir}/%{name}/hardware/icaro/ejemplos
+%{_datadir}/%{name}/hardware/icaro/ejemplos/*
 
+%{_datadir}/%{name}/imagenes/*.svg
 # Pinguino Firmware
 # Exception granted by fpc
 # For more details, see https://fedorahosted.org/fpc/ticket/253
 
-%dir %{_datadir}/%{name}/pic16
-%dir %{_datadir}/%{name}/pic16/lib
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/lib
+%{_datadir}/%{name}/hardware/icaro/imagenes/componentes/*.png
+
+%{_datadir}/%{name}/hardware/icaro/imagenes/gif/*.gif
+%{_datadir}/%{name}/hardware/icaro/imagenes/*.png
 
 # rpmlint complains for this file. arch-independent-package-contains-binary-or-object error
 # Really not intended as a file for be executed in Fedora host.
 
-%{_datadir}/%{name}/pic16/lib/*.lib
-%dir %{_datadir}/%{name}/pic16/lkr
-%{_datadir}/%{name}/pic16/lkr/*.lkr
-%dir %{_datadir}/%{name}/pic16/np05
-%dir %{_datadir}/%{name}/pic16/np05/source
-%{_datadir}/%{name}/pic16/np05/source/*.c
-%{_datadir}/%{name}/pic16/np05/source/*.pde
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/lib/*.lib
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/lkr
 
-%dir %{_datadir}/%{name}/pic16/np05/non-free/include/pic16
-%{_datadir}/%{name}/pic16/np05/non-free/include/pic16/*.h
-
-%dir %{_datadir}/%{name}/pic16/np05/non-free/lib/pic16
-%{_datadir}/%{name}/pic16/np05/non-free/lib/pic16/*.lib
-
-%dir %{_datadir}/%{name}/pic16/np05/tmp
-%{_datadir}/%{name}/pic16/np05/tmp/*.c
-%{_datadir}/%{name}/pic16/np05/tmp/*.h
-
-%dir %{_datadir}/%{name}/pic16/np05/tmp/usb
-%{_datadir}/%{name}/pic16/np05/tmp/usb/*.c
-%{_datadir}/%{name}/pic16/np05/tmp/usb/*.h
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/icaro_lib/*.h
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/icaro_lib/*.c
 
 
-%{_datadir}/%{name}/pic16/np05/temporal/
-%{_datadir}/%{name}/pic16/np05/tmp/stdout
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/pilas/*.c
 
-%dir %{_datadir}/%{name}/pic16/obj
-%{_datadir}/%{name}/pic16/obj/*.o
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/tortucaro/*.c
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/icaroblue/*.c
+
+
+%{_datadir}/%{name}/hardware/icaro/*.py
+
+%{_datadir}/%{name}/hardware/*.py
+%{_datadir}/%{name}/hardware/icaro/modulos/*.py
+%{_datadir}/%{name}/hardware/icaro/micro/conf/*.ini
+
+
+
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/lkr/*.lkr
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/icaro_lib
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/source
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/*.c
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/*.pde
+
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/non-free/include/pic16
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/non-free/include/pic16/*.h
+
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/non-free/lib/pic16
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/non-free/lib/pic16/*.lib
+
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/*.c
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/*.h
+
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/usb
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/usb/*.c
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/usb/*.h
+
+
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/temporal/
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/stdout
+
+%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/obj
+%{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/obj/*.o
 
 
 # This is not sugar activity, is a plugin for turtleart
@@ -239,8 +272,13 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/41-microchip.rules
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-serial.rules
 %config(noreplace) %{_sysconfdir}/udev/rules.d/026-microchip.rules
+%config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Mon Jul 18 2016 Omar Berroteran <omarberroteranlkf@gmail.com> -1.0.4-4
+- Bump to the new upstream version
+- changes on Apicaro
+
 * Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.4-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 
