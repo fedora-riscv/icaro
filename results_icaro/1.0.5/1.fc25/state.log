@@ -1,0 +1,13 @@
+2016-07-19 12:57:28,957 - Mock Version: 1.2.18
+2016-07-19 12:57:29,486 - Start: dnf update
+2016-07-19 13:07:48,775 - Finish: dnf update
+2016-07-19 13:07:48,785 - Finish: chroot init
+2016-07-19 13:07:48,787 - Start: build phase for icaro-1.0.5-1.fc25.src.rpm
+2016-07-19 13:07:48,791 - Start: build setup for icaro-1.0.5-1.fc25.src.rpm
+2016-07-19 13:20:14,714 - Finish: build setup for icaro-1.0.5-1.fc25.src.rpm
+2016-07-19 13:20:14,715 - Start: rpmbuild icaro-1.0.5-1.fc25.src.rpm
+2016-07-19 13:20:17,511 - Finish: rpmbuild icaro-1.0.5-1.fc25.src.rpm
+2016-07-19 13:20:17,513 - Finish: build phase for icaro-1.0.5-1.fc25.src.rpm
+2016-07-19 13:20:17,514 - Start: clean chroot
+2016-07-19 13:20:21,735 - Finish: clean chroot
+2016-07-19 13:20:21,736 - Finish: run

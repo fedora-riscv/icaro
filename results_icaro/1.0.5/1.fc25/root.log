@@ -1,0 +1,653 @@
+INFO buildroot.py:313:  Mock Version: 1.2.18
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG buildroot.py:451:  kernel version == 4.6.3-300.fc24.x86_64
+DEBUG util.py:114:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/fstab
+DEBUG util.py:114:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum.conf
+DEBUG util.py:114:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf.conf
+DEBUG util.py:114:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/var/log/yum.log
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'sysfs', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/shm'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/pts'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/fedora-rawhide-x86_64/dnf_cache/', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf/'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/mount', '-n', '--bind', '/tmp/mock-selinux-plugin.433t1x9z', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG buildroot.py:138:  rootdir = /var/lib/mock/fedora-rawhide-x86_64/root
+DEBUG buildroot.py:139:  resultdir = /home/lkf/fedora-scm/icaro/results_icaro/1.0.5/1.fc25
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/pki/mock
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_US.utf8', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock'} and shell False
+DEBUG util.py:287:  Unsharing. Flags: 134217728
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/usr/sbin/groupdel', 'mockbuild'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_US.utf8', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock'} and shell False
+DEBUG util.py:287:  Unsharing. Flags: 134217728
+DEBUG util.py:421:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:546:  Child return code was: 6
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/usr/sbin/groupadd', '-g', '135', 'mockbuild'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_US.utf8', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock'} and shell False
+DEBUG util.py:287:  Unsharing. Flags: 134217728
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/usr/sbin/useradd', '-o', '-m', '-u', '1000', '-g', '135', '-d', '/builddir', '-n', 'mockbuild'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_US.utf8', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock'} and shell False
+DEBUG util.py:287:  Unsharing. Flags: 134217728
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/RPMS
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/RPMS
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SPECS
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SPECS
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILD
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILD
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/originals
+DEBUG util.py:104:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/originals
+DEBUG package_manager.py:96:  ['/usr/bin/dnf', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', '-y', '--releasever', '25', '--disableplugin=local', '--setopt=deltarpm=false', 'update']
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/usr/bin/dnf', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', '-y', '--releasever', '25', '--disableplugin=local', '--setopt=deltarpm=false', 'update', '--setopt=tsflags=nocontexts'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_US.utf8', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'LC_MESSAGES': 'C', 'HOSTNAME': 'mock'} and shell False
+DEBUG util.py:421:  fedora                                                                                                                                   95 kB/s |  49 MB     08:48    
+DEBUG util.py:421:  Last metadata expiration check: 0:05:39 ago on Tue Jul 19 13:00:58 2016.
+DEBUG util.py:421:  Dependencies resolved.
+DEBUG util.py:421:  ========================================================================================================================================================================
+DEBUG util.py:421:   Package                                            Arch                           Version                                         Repository                      Size
+DEBUG util.py:421:  ========================================================================================================================================================================
+DEBUG util.py:421:  Upgrading:
+DEBUG util.py:421:   gdb                                                x86_64                         7.11.50.20160716-1.fc25                         fedora                         3.3 M
+DEBUG util.py:421:   glib2                                              x86_64                         2.49.3-1.fc25                                   fedora                         2.3 M
+DEBUG util.py:421:  Skipping packages with conflicts:
+DEBUG util.py:421:  (add '--best --allowerasing' to command line to force their upgrade):
+DEBUG util.py:421:   bash-completion                                    noarch                         1:2.3-1.fc25                                    fedora                         266 k
+DEBUG util.py:421:   dbus-libs                                          x86_64                         1:1.11.2-1.fc25                                 fedora                         172 k
+DEBUG util.py:421:   deltarpm                                           x86_64                         3.6-16.fc25                                     fedora                          88 k
+DEBUG util.py:421:   dnf-conf                                           noarch                         1.1.9-2.fc25                                    fedora                          95 k
+DEBUG util.py:421:   dnf-plugins-core                                   noarch                         0.1.21-2.fc25                                   fedora                          39 k
+DEBUG util.py:421:   gcc-gdb-plugin                                     x86_64                         6.1.1-3.fc25                                    fedora                          78 k
+DEBUG util.py:421:   gpgme                                              x86_64                         1.6.0-1.fc25                                    fedora                         170 k
+DEBUG util.py:421:   hawkey                                             x86_64                         0.6.3-2.fc25                                    fedora                          91 k
+DEBUG util.py:421:   libcomps                                           x86_64                         0.1.7-4.fc25                                    fedora                          73 k
+DEBUG util.py:421:   librepo                                            x86_64                         1.7.18-2.fc25                                   fedora                          86 k
+DEBUG util.py:421:   libreport-filesystem                               x86_64                         2.7.1-1.fc25                                    fedora                          47 k
+DEBUG util.py:421:   libsolv                                            x86_64                         0.6.22-1.fc25                                   fedora                         335 k
+DEBUG util.py:421:   python3                                            x86_64                         3.5.1-12.fc25                                   fedora                          55 k
+DEBUG util.py:421:   python3-dnf                                        noarch                         1.1.9-2.fc25                                    fedora                         450 k
+DEBUG util.py:421:   python3-dnf-plugins-core                           noarch                         0.1.21-2.fc25                                   fedora                          92 k
+DEBUG util.py:421:   python3-hawkey                                     x86_64                         0.6.3-2.fc25                                    fedora                          76 k
+DEBUG util.py:421:   python3-iniparse                                   noarch                         0.4-19.fc25                                     fedora                          45 k
+DEBUG util.py:421:   python3-libcomps                                   x86_64                         0.1.7-4.fc25                                    fedora                          46 k
+DEBUG util.py:421:   python3-librepo                                    x86_64                         1.7.18-2.fc25                                   fedora                          55 k
+DEBUG util.py:421:   python3-libs                                       x86_64                         3.5.1-12.fc25                                   fedora                         1.3 M
+DEBUG util.py:421:   python3-pip                                        noarch                         8.1.2-1.fc25                                    fedora                         1.7 M
+DEBUG util.py:421:   python3-pygpgme                                    x86_64                         0.3-15.fc24                                     fedora                          77 k
+DEBUG util.py:421:   python3-setuptools                                 noarch                         24.0.1-1.fc25                                   fedora                         507 k
+DEBUG util.py:421:   python3-six                                        noarch                         1.10.0-2.fc24                                   fedora                          35 k
+DEBUG util.py:421:   rpm-plugin-systemd-inhibit                         x86_64                         4.13.0-0.rc1.39.fc25                            fedora                          54 k
+DEBUG util.py:421:   rpm-python3                                        x86_64                         4.13.0-0.rc1.39.fc25                            fedora                         102 k
+DEBUG util.py:421:   shared-mime-info                                   x86_64                         1.6-3.fc25                                      fedora                         302 k
+DEBUG util.py:421:  Transaction Summary
+DEBUG util.py:421:  ========================================================================================================================================================================
+DEBUG util.py:421:  Upgrade   2 Packages
+DEBUG util.py:421:  Skip     27 Packages
+DEBUG util.py:421:  Total download size: 5.6 M
+DEBUG util.py:421:  Downloading Packages:
+DEBUG util.py:421:  (1/2): glib2-2.49.3-1.fc25.x86_64.rpm                                                                                                    43 kB/s | 2.3 MB     00:55    
+DEBUG util.py:421:  (2/2): gdb-7.11.50.20160716-1.fc25.x86_64.rpm                                                                                            52 kB/s | 3.3 MB     01:05    
+DEBUG util.py:421:  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DEBUG util.py:421:  Total                                                                                                                                    86 kB/s | 5.6 MB     01:07     
+DEBUG util.py:421:  Running transaction check
+DEBUG util.py:421:  Transaction check succeeded.
+DEBUG util.py:421:  Running transaction test
+DEBUG util.py:421:  Transaction test succeeded.
+DEBUG util.py:421:  Running transaction
+DEBUG util.py:421:    Upgrading   : glib2-2.49.3-1.fc25.x86_64                                                                                                                          1/4 
+DEBUG util.py:421:    Upgrading   : gdb-7.11.50.20160716-1.fc25.x86_64                                                                                                                  2/4 
+DEBUG util.py:421:    Cleanup     : glib2-2.49.1-2.fc25.x86_64                                                                                                                          3/4 
+DEBUG util.py:421:    Cleanup     : gdb-7.11.1-76.fc25.x86_64                                                                                                                           4/4 
+DEBUG util.py:421:    Verifying   : gdb-7.11.50.20160716-1.fc25.x86_64                                                                                                                  1/4 
+DEBUG util.py:421:    Verifying   : glib2-2.49.3-1.fc25.x86_64                                                                                                                          2/4 
+DEBUG util.py:421:    Verifying   : glib2-2.49.1-2.fc25.x86_64                                                                                                                          3/4 
+DEBUG util.py:421:    Verifying   : gdb-7.11.1-76.fc25.x86_64                                                                                                                           4/4 
+DEBUG util.py:421:  Upgraded:
+DEBUG util.py:421:    gdb.x86_64 7.11.50.20160716-1.fc25                                                     glib2.x86_64 2.49.3-1.fc25                                                    
+DEBUG util.py:421:  Complete!
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:114:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/.initialized
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/icaro-1.0.5-1.fc25.src.rpm'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_US.utf8', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock'} and shell False
+DEBUG util.py:287:  Unsharing. Flags: 134217728
+DEBUG util.py:421:  Updating / installing...
+DEBUG util.py:421:  icaro-1.0.5-1.fc25                    warning: user lkf does not exist - using root
+DEBUG util.py:421:  warning: group lkf does not exist - using root
+DEBUG util.py:421:  warning: user lkf does not exist - using root
+DEBUG util.py:421:  warning: group lkf does not exist - using root
+DEBUG util.py:421:  #######################################warning: user lkf does not exist - using root
+DEBUG util.py:421:  warning: group lkf does not exist - using root
+DEBUG util.py:421:  #
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/rpm', '-qpl', '/builddir/build/originals/icaro-1.0.5-1.fc25.src.rpm'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_US.utf8', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock'} and shell False
+DEBUG util.py:287:  Unsharing. Flags: 134217728
+DEBUG util.py:421:  README.ENG
+DEBUG util.py:421:  icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2.tar.gz
+DEBUG util.py:421:  icaro.spec
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:287:  Unsharing. Flags: 134217728
+DEBUG package_manager.py:96:  ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', '--releasever', '25', '/var/lib/mock/fedora-rawhide-x86_64/root//builddir/build/SRPMS/icaro-1.0.5-1.fc25.src.rpm']
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', '--releasever', '25', '/var/lib/mock/fedora-rawhide-x86_64/root//builddir/build/SRPMS/icaro-1.0.5-1.fc25.src.rpm', '--setopt=tsflags=nocontexts'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_US.utf8', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'LC_MESSAGES': 'C', 'HOSTNAME': 'mock'} and shell False
+DEBUG util.py:421:  fedora                                                                                                                                   83 kB/s |  49 MB     10:05    
+DEBUG util.py:421:  Last metadata expiration check: 0:05:50 ago on Tue Jul 19 13:12:21 2016.
+DEBUG util.py:421:  Dependencies resolved.
+DEBUG util.py:421:  ========================================================================================================================================================================
+DEBUG util.py:421:   Package                                          Arch                            Version                                         Repository                       Size
+DEBUG util.py:421:  ========================================================================================================================================================================
+DEBUG util.py:421:  Installing:
+DEBUG util.py:421:   GConf2                                           x86_64                          3.2.6-16.fc24                                   fedora                          1.0 M
+DEBUG util.py:421:   aajohan-comfortaa-fonts                          noarch                          2.004-6.fc24                                    fedora                          151 k
+DEBUG util.py:421:   acl                                              x86_64                          2.2.52-11.fc24                                  fedora                           77 k
+DEBUG util.py:421:   alsa-lib                                         x86_64                          1.1.1-1.fc25                                    fedora                          406 k
+DEBUG util.py:421:   atk                                              x86_64                          2.20.0-1.fc25                                   fedora                          260 k
+DEBUG util.py:421:   avahi-libs                                       x86_64                          0.6.32-1.fc25                                   fedora                           60 k
+DEBUG util.py:421:   cairo                                            x86_64                          1.14.6-1.fc25                                   fedora                          719 k
+DEBUG util.py:421:   cups-libs                                        x86_64                          1:2.2-0.1b2.fc25                                fedora                          402 k
+DEBUG util.py:421:   dbus                                             x86_64                          1:1.11.2-1.fc25                                 fedora                          242 k
+DEBUG util.py:421:   dbus-glib                                        x86_64                          0.106-1.fc24                                    fedora                          119 k
+DEBUG util.py:421:   dbus-libs                                        x86_64                          1:1.11.2-1.fc25                                 fedora                          172 k
+DEBUG util.py:421:   dbus-python                                      x86_64                          1.2.4-1.fc25                                    fedora                          129 k
+DEBUG util.py:421:   desktop-file-utils                               x86_64                          0.23-1.fc25                                     fedora                           75 k
+DEBUG util.py:421:   fontconfig                                       x86_64                          2.12.0-1.fc25                                   fedora                          242 k
+DEBUG util.py:421:   fontpackages-filesystem                          noarch                          1.44-17.fc24                                    fedora                           15 k
+DEBUG util.py:421:   freetype                                         x86_64                          2.6.5-1.fc25                                    fedora                          357 k
+DEBUG util.py:421:   gdk-pixbuf2                                      x86_64                          2.35.2-1.fc25                                   fedora                          442 k
+DEBUG util.py:421:   gdk-pixbuf2-modules                              x86_64                          2.35.2-1.fc25                                   fedora                           95 k
+DEBUG util.py:421:   gettext                                          x86_64                          0.19.8.1-1.fc25                                 fedora                          1.0 M
+DEBUG util.py:421:   gettext-libs                                     x86_64                          0.19.8.1-1.fc25                                 fedora                          504 k
+DEBUG util.py:421:   gnome-python2                                    x86_64                          2.28.1-17.fc24                                  fedora                           51 k
+DEBUG util.py:421:   gnome-python2-gconf                              x86_64                          2.28.1-17.fc24                                  fedora                           50 k
+DEBUG util.py:421:   gnome-python2-rsvg                               x86_64                          2.32.0-23.fc24                                  fedora                           25 k
+DEBUG util.py:421:   graphite2                                        x86_64                          1.3.6-1.fc25                                    fedora                          114 k
+DEBUG util.py:421:   gtk-update-icon-cache                            x86_64                          3.21.4-1.fc25                                   fedora                           33 k
+DEBUG util.py:421:   gtk2                                             x86_64                          2.24.30-2.fc25                                  fedora                          3.4 M
+DEBUG util.py:421:   harfbuzz                                         x86_64                          1.2.7-1.fc25                                    fedora                          217 k
+DEBUG util.py:421:   hicolor-icon-theme                               noarch                          0.15-3.fc24                                     fedora                           46 k
+DEBUG util.py:421:   hippo-canvas                                     x86_64                          0.3.0-18.fc24                                   fedora                           92 k
+DEBUG util.py:421:   hippo-canvas-python                              x86_64                          0.3.0-18.fc24                                   fedora                           42 k
+DEBUG util.py:421:   hwdata                                           noarch                          0.290-1.fc25                                    fedora                          1.4 M
+DEBUG util.py:421:   iptables-libs                                    x86_64                          1.6.0-1.fc25                                    fedora                           86 k
+DEBUG util.py:421:   jasper-libs                                      x86_64                          1.900.1-32.fc24                                 fedora                          148 k
+DEBUG util.py:421:   jbigkit-libs                                     x86_64                          2.1-5.fc24                                      fedora                           52 k
+DEBUG util.py:421:   kmod-libs                                        x86_64                          22-4.fc25                                       fedora                           60 k
+DEBUG util.py:421:   libICE                                           x86_64                          1.0.9-5.fc25                                    fedora                           68 k
+DEBUG util.py:421:   libSM                                            x86_64                          1.2.2-4.fc24                                    fedora                           43 k
+DEBUG util.py:421:   libX11                                           x86_64                          1.6.3-3.fc24                                    fedora                          607 k
+DEBUG util.py:421:   libX11-common                                    noarch                          1.6.3-3.fc24                                    fedora                          164 k
+DEBUG util.py:421:   libXau                                           x86_64                          1.0.8-6.fc24                                    fedora                           33 k
+DEBUG util.py:421:   libXcomposite                                    x86_64                          0.4.4-8.fc24                                    fedora                           27 k
+DEBUG util.py:421:   libXcursor                                       x86_64                          1.1.14-6.fc24                                   fedora                           34 k
+DEBUG util.py:421:   libXdamage                                       x86_64                          1.1.4-8.fc24                                    fedora                           25 k
+DEBUG util.py:421:   libXext                                          x86_64                          1.3.3-4.fc24                                    fedora                           41 k
+DEBUG util.py:421:   libXfixes                                        x86_64                          5.0.2-2.fc25                                    fedora                           22 k
+DEBUG util.py:421:   libXft                                           x86_64                          2.3.2-4.fc24                                    fedora                           62 k
+DEBUG util.py:421:   libXi                                            x86_64                          1.7.6-2.fc24                                    fedora                           44 k
+DEBUG util.py:421:   libXinerama                                      x86_64                          1.1.3-6.fc24                                    fedora                           18 k
+DEBUG util.py:421:   libXrandr                                        x86_64                          1.5.0-3.fc24                                    fedora                           30 k
+DEBUG util.py:421:   libXrender                                       x86_64                          0.9.9-3.fc24                                    fedora                           30 k
+DEBUG util.py:421:   libXxf86vm                                       x86_64                          1.1.4-3.fc24                                    fedora                           22 k
+DEBUG util.py:421:   libcroco                                         x86_64                          0.6.11-2.fc24                                   fedora                          108 k
+DEBUG util.py:421:   libdatrie                                        x86_64                          0.2.9-3.fc25                                    fedora                           30 k
+DEBUG util.py:421:   libdrm                                           x86_64                          2.4.68-1.fc25                                   fedora                          143 k
+DEBUG util.py:421:   libjpeg-turbo                                    x86_64                          1.5.0-1.fc25                                    fedora                          152 k
+DEBUG util.py:421:   libpcap                                          x86_64                          14:1.7.4-2.fc24                                 fedora                          148 k
+DEBUG util.py:421:   libpciaccess                                     x86_64                          0.13.4-3.fc24                                   fedora                           30 k
+DEBUG util.py:421:   libpng                                           x86_64                          2:1.6.23-1.fc25                                 fedora                          118 k
+DEBUG util.py:421:   librsvg2                                         x86_64                          2.40.16-1.fc25                                  fedora                          131 k
+DEBUG util.py:421:   libseccomp                                       x86_64                          2.3.1-1.fc25                                    fedora                           60 k
+DEBUG util.py:421:   libthai                                          x86_64                          0.1.24-1.fc24                                   fedora                          196 k
+DEBUG util.py:421:   libtiff                                          x86_64                          4.0.6-2.fc24                                    fedora                          174 k
+DEBUG util.py:421:   libwayland-client                                x86_64                          1.11.0-1.fc25                                   fedora                           32 k
+DEBUG util.py:421:   libwayland-server                                x86_64                          1.11.0-1.fc25                                   fedora                           37 k
+DEBUG util.py:421:   libxcb                                           x86_64                          1.12-1.fc25                                     fedora                          207 k
+DEBUG util.py:421:   libxshmfence                                     x86_64                          1.2-3.fc24                                      fedora                           11 k
+DEBUG util.py:421:   mesa-libEGL                                      x86_64                          12.0.1-1.fc25                                   fedora                           95 k
+DEBUG util.py:421:   mesa-libGL                                       x86_64                          12.0.1-1.fc25                                   fedora                          157 k
+DEBUG util.py:421:   mesa-libgbm                                      x86_64                          12.0.1-1.fc25                                   fedora                           42 k
+DEBUG util.py:421:   mesa-libglapi                                    x86_64                          12.0.1-1.fc25                                   fedora                           48 k
+DEBUG util.py:421:   pango                                            x86_64                          1.40.1-1.fc25                                   fedora                          278 k
+DEBUG util.py:421:   pixman                                           x86_64                          0.34.0-2.fc24                                   fedora                          259 k
+DEBUG util.py:421:   polkit-libs                                      x86_64                          0.113-5.fc24                                    fedora                           69 k
+DEBUG util.py:421:   psmisc                                           x86_64                          22.21-8.fc24                                    fedora                          148 k
+DEBUG util.py:421:   pycairo                                          x86_64                          1.10.0-4.fc24                                   fedora                          481 k
+DEBUG util.py:421:   pygobject2                                       x86_64                          2.28.6-15.fc24                                  fedora                          228 k
+DEBUG util.py:421:   pygtk2                                           x86_64                          2.24.0-14.fc25                                  fedora                          914 k
+DEBUG util.py:421:   python-devel                                     x86_64                          2.7.12-1.fc25                                   fedora                          404 k
+DEBUG util.py:421:   python-rpm-macros                                noarch                          3-10.fc25                                       fedora                          8.1 k
+DEBUG util.py:421:   python-simplejson                                x86_64                          3.5.3-5.fc24                                    fedora                          273 k
+DEBUG util.py:421:   python-six                                       noarch                          1.10.0-2.fc24                                   fedora                           34 k
+DEBUG util.py:421:   python-xpyb                                      x86_64                          1.3.1-6.fc24                                    fedora                          138 k
+DEBUG util.py:421:   python2-dateutil                                 noarch                          1:2.5.3-1.fc25                                  fedora                          249 k
+DEBUG util.py:421:   python2-decorator                                noarch                          4.0.10-1.fc25                                   fedora                           60 k
+DEBUG util.py:421:   python2-rpm-macros                               noarch                          3-10.fc25                                       fedora                          7.4 k
+DEBUG util.py:421:   python3                                          x86_64                          3.5.1-12.fc25                                   fedora                           55 k
+DEBUG util.py:421:   python3-libs                                     x86_64                          3.5.1-12.fc25                                   fedora                          1.3 M
+DEBUG util.py:421:   python3-pip                                      noarch                          8.1.2-1.fc25                                    fedora                          1.7 M
+DEBUG util.py:421:   python3-setuptools                               noarch                          24.0.1-1.fc25                                   fedora                          507 k
+DEBUG util.py:421:   qrencode-libs                                    x86_64                          3.4.2-6.fc24                                    fedora                           55 k
+DEBUG util.py:421:   shared-mime-info                                 x86_64                          1.6-3.fc25                                      fedora                          302 k
+DEBUG util.py:421:   sugar-base                                       x86_64                          0.98.0-7.fc24                                   fedora                           64 k
+DEBUG util.py:421:   sugar-datastore                                  x86_64                          0.108.1-1.fc25                                  fedora                           55 k
+DEBUG util.py:421:   sugar-toolkit                                    x86_64                          0.98.1-10.fc24                                  fedora                          305 k
+DEBUG util.py:421:   systemd                                          x86_64                          230-3.gitea68351.fc25                           fedora                          4.7 M
+DEBUG util.py:421:   systemd-pam                                      x86_64                          230-3.gitea68351.fc25                           fedora                          178 k
+DEBUG util.py:421:   xapian-bindings                                  x86_64                          1.2.23-1.fc25                                   fedora                           53 k
+DEBUG util.py:421:   xapian-bindings-python                           x86_64                          1.2.23-1.fc25                                   fedora                          260 k
+DEBUG util.py:421:   xapian-core-libs                                 x86_64                          1.2.23-1.fc25                                   fedora                          758 k
+DEBUG util.py:421:  Upgrading:
+DEBUG util.py:421:   python                                           x86_64                          2.7.12-1.fc25                                   fedora                           95 k
+DEBUG util.py:421:   python-libs                                      x86_64                          2.7.12-1.fc25                                   fedora                          5.8 M
+DEBUG util.py:421:  Transaction Summary
+DEBUG util.py:421:  ========================================================================================================================================================================
+DEBUG util.py:421:  Install  99 Packages
+DEBUG util.py:421:  Upgrade   2 Packages
+DEBUG util.py:421:  Total size: 35 M
+DEBUG util.py:421:  Total download size: 6.4 M
+DEBUG util.py:421:  Downloading Packages:
+DEBUG util.py:421:  [SKIPPED] desktop-file-utils-0.23-1.fc25.x86_64.rpm: Already downloaded                                                                                                
+DEBUG util.py:421:  [SKIPPED] sugar-toolkit-0.98.1-10.fc24.x86_64.rpm: Already downloaded                                                                                                  
+DEBUG util.py:421:  [SKIPPED] alsa-lib-1.1.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                         
+DEBUG util.py:421:  [SKIPPED] atk-2.20.0-1.fc25.x86_64.rpm: Already downloaded                                                                                                             
+DEBUG util.py:421:  [SKIPPED] cairo-1.14.6-1.fc25.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] fontconfig-2.12.0-1.fc25.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] freetype-2.6.5-1.fc25.x86_64.rpm: Already downloaded                                                                                                         
+DEBUG util.py:421:  [SKIPPED] gdk-pixbuf2-2.35.2-1.fc25.x86_64.rpm: Already downloaded                                                                                                     
+DEBUG util.py:421:  [SKIPPED] gettext-0.19.8.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] gnome-python2-gconf-2.28.1-17.fc24.x86_64.rpm: Already downloaded                                                                                            
+DEBUG util.py:421:  [SKIPPED] gnome-python2-rsvg-2.32.0-23.fc24.x86_64.rpm: Already downloaded                                                                                             
+DEBUG util.py:421:  [SKIPPED] gtk2-2.24.30-2.fc25.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] hippo-canvas-python-0.3.0-18.fc24.x86_64.rpm: Already downloaded                                                                                             
+DEBUG util.py:421:  [SKIPPED] libICE-1.0.9-5.fc25.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] libSM-1.2.2-4.fc24.x86_64.rpm: Already downloaded                                                                                                            
+DEBUG util.py:421:  [SKIPPED] pango-1.40.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] python-simplejson-3.5.3-5.fc24.x86_64.rpm: Already downloaded                                                                                                
+DEBUG util.py:421:  [SKIPPED] python2-dateutil-2.5.3-1.fc25.noarch.rpm: Already downloaded                                                                                                 
+DEBUG util.py:421:  [SKIPPED] sugar-base-0.98.0-7.fc24.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] sugar-datastore-0.108.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                
+DEBUG util.py:421:  [SKIPPED] libX11-1.6.3-3.fc24.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] libXext-1.3.3-4.fc24.x86_64.rpm: Already downloaded                                                                                                          
+DEBUG util.py:421:  [SKIPPED] libXrender-0.9.9-3.fc24.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] libpng-1.6.23-1.fc25.x86_64.rpm: Already downloaded                                                                                                          
+DEBUG util.py:421:  [SKIPPED] libxcb-1.12-1.fc25.x86_64.rpm: Already downloaded                                                                                                            
+DEBUG util.py:421:  [SKIPPED] mesa-libEGL-12.0.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                     
+DEBUG util.py:421:  [SKIPPED] mesa-libGL-12.0.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] pixman-0.34.0-2.fc24.x86_64.rpm: Already downloaded                                                                                                          
+DEBUG util.py:421:  [SKIPPED] fontpackages-filesystem-1.44-17.fc24.noarch.rpm: Already downloaded                                                                                          
+DEBUG util.py:421:  [SKIPPED] shared-mime-info-1.6-3.fc25.x86_64.rpm: Already downloaded                                                                                                   
+DEBUG util.py:421:  [SKIPPED] gettext-libs-0.19.8.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                  
+DEBUG util.py:421:  [SKIPPED] libcroco-0.6.11-2.fc24.x86_64.rpm: Already downloaded                                                                                                        
+DEBUG util.py:421:  [SKIPPED] GConf2-3.2.6-16.fc24.x86_64.rpm: Already downloaded                                                                                                          
+DEBUG util.py:421:  [SKIPPED] gnome-python2-2.28.1-17.fc24.x86_64.rpm: Already downloaded                                                                                                  
+DEBUG util.py:421:  [SKIPPED] librsvg2-2.40.16-1.fc25.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] cups-libs-2.2-0.1b2.fc25.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] gdk-pixbuf2-modules-2.35.2-1.fc25.x86_64.rpm: Already downloaded                                                                                             
+DEBUG util.py:421:  [SKIPPED] hicolor-icon-theme-0.15-3.fc24.noarch.rpm: Already downloaded                                                                                                
+DEBUG util.py:421:  [SKIPPED] libXcomposite-0.4.4-8.fc24.x86_64.rpm: Already downloaded                                                                                                    
+DEBUG util.py:421:  [SKIPPED] libXcursor-1.1.14-6.fc24.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] libXdamage-1.1.4-8.fc24.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] libXfixes-5.0.2-2.fc25.x86_64.rpm: Already downloaded                                                                                                        
+DEBUG util.py:421:  [SKIPPED] libXi-1.7.6-2.fc24.x86_64.rpm: Already downloaded                                                                                                            
+DEBUG util.py:421:  [SKIPPED] libXinerama-1.1.3-6.fc24.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] libXrandr-1.5.0-3.fc24.x86_64.rpm: Already downloaded                                                                                                        
+DEBUG util.py:421:  [SKIPPED] hippo-canvas-0.3.0-18.fc24.x86_64.rpm: Already downloaded                                                                                                    
+DEBUG util.py:421:  [SKIPPED] harfbuzz-1.2.7-1.fc25.x86_64.rpm: Already downloaded                                                                                                         
+DEBUG util.py:421:  [SKIPPED] libXft-2.3.2-4.fc24.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] libthai-0.1.24-1.fc24.x86_64.rpm: Already downloaded                                                                                                         
+DEBUG util.py:421:  [SKIPPED] python-six-1.10.0-2.fc24.noarch.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] python2-decorator-4.0.10-1.fc25.noarch.rpm: Already downloaded                                                                                               
+DEBUG util.py:421:  [SKIPPED] xapian-bindings-python-1.2.23-1.fc25.x86_64.rpm: Already downloaded                                                                                          
+DEBUG util.py:421:  [SKIPPED] libX11-common-1.6.3-3.fc24.noarch.rpm: Already downloaded                                                                                                    
+DEBUG util.py:421:  [SKIPPED] libXau-1.0.8-6.fc24.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] libdrm-2.4.68-1.fc25.x86_64.rpm: Already downloaded                                                                                                          
+DEBUG util.py:421:  [SKIPPED] libwayland-client-1.11.0-1.fc25.x86_64.rpm: Already downloaded                                                                                               
+DEBUG util.py:421:  [SKIPPED] libwayland-server-1.11.0-1.fc25.x86_64.rpm: Already downloaded                                                                                               
+DEBUG util.py:421:  [SKIPPED] libxshmfence-1.2-3.fc24.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] mesa-libgbm-12.0.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                     
+DEBUG util.py:421:  [SKIPPED] libXxf86vm-1.1.4-3.fc24.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] mesa-libglapi-12.0.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                   
+DEBUG util.py:421:  [SKIPPED] dbus-glib-0.106-1.fc24.x86_64.rpm: Already downloaded                                                                                                        
+DEBUG util.py:421:  [SKIPPED] dbus-libs-1.11.2-1.fc25.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] polkit-libs-0.113-5.fc24.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] psmisc-22.21-8.fc24.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] pygtk2-2.24.0-14.fc25.x86_64.rpm: Already downloaded                                                                                                         
+DEBUG util.py:421:  [SKIPPED] avahi-libs-0.6.32-1.fc25.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] jasper-libs-1.900.1-32.fc24.x86_64.rpm: Already downloaded                                                                                                   
+DEBUG util.py:421:  [SKIPPED] libjpeg-turbo-1.5.0-1.fc25.x86_64.rpm: Already downloaded                                                                                                    
+DEBUG util.py:421:  [SKIPPED] libtiff-4.0.6-2.fc24.x86_64.rpm: Already downloaded                                                                                                          
+DEBUG util.py:421:  [SKIPPED] graphite2-1.3.6-1.fc25.x86_64.rpm: Already downloaded                                                                                                        
+DEBUG util.py:421:  [SKIPPED] libdatrie-0.2.9-3.fc25.x86_64.rpm: Already downloaded                                                                                                        
+DEBUG util.py:421:  [SKIPPED] xapian-bindings-1.2.23-1.fc25.x86_64.rpm: Already downloaded                                                                                                 
+DEBUG util.py:421:  [SKIPPED] xapian-core-libs-1.2.23-1.fc25.x86_64.rpm: Already downloaded                                                                                                
+DEBUG util.py:421:  [SKIPPED] libpciaccess-0.13.4-3.fc24.x86_64.rpm: Already downloaded                                                                                                    
+DEBUG util.py:421:  [SKIPPED] jbigkit-libs-2.1-5.fc24.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] hwdata-0.290-1.fc25.noarch.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] python-rpm-macros-3-10.fc25.noarch.rpm: Already downloaded                                                                                                   
+DEBUG util.py:421:  [SKIPPED] python2-rpm-macros-3-10.fc25.noarch.rpm: Already downloaded                                                                                                  
+DEBUG util.py:421:  [SKIPPED] dbus-python-1.2.4-1.fc25.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] pycairo-1.10.0-4.fc24.x86_64.rpm: Already downloaded                                                                                                         
+DEBUG util.py:421:  [SKIPPED] pygobject2-2.28.6-15.fc24.x86_64.rpm: Already downloaded                                                                                                     
+DEBUG util.py:421:  [SKIPPED] python-xpyb-1.3.1-6.fc24.x86_64.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] systemd-230-3.gitea68351.fc25.x86_64.rpm: Already downloaded                                                                                                 
+DEBUG util.py:421:  [SKIPPED] acl-2.2.52-11.fc24.x86_64.rpm: Already downloaded                                                                                                            
+DEBUG util.py:421:  [SKIPPED] iptables-libs-1.6.0-1.fc25.x86_64.rpm: Already downloaded                                                                                                    
+DEBUG util.py:421:  [SKIPPED] kmod-libs-22-4.fc25.x86_64.rpm: Already downloaded                                                                                                           
+DEBUG util.py:421:  [SKIPPED] libseccomp-2.3.1-1.fc25.x86_64.rpm: Already downloaded                                                                                                       
+DEBUG util.py:421:  [SKIPPED] qrencode-libs-3.4.2-6.fc24.x86_64.rpm: Already downloaded                                                                                                    
+DEBUG util.py:421:  [SKIPPED] libpcap-1.7.4-2.fc24.x86_64.rpm: Already downloaded                                                                                                          
+DEBUG util.py:421:  [SKIPPED] python3-3.5.1-12.fc25.x86_64.rpm: Already downloaded                                                                                                         
+DEBUG util.py:421:  [SKIPPED] python3-libs-3.5.1-12.fc25.x86_64.rpm: Already downloaded                                                                                                    
+DEBUG util.py:421:  [SKIPPED] python3-pip-8.1.2-1.fc25.noarch.rpm: Already downloaded                                                                                                      
+DEBUG util.py:421:  [SKIPPED] python3-setuptools-24.0.1-1.fc25.noarch.rpm: Already downloaded                                                                                              
+DEBUG util.py:421:  [SKIPPED] dbus-1.11.2-1.fc25.x86_64.rpm: Already downloaded                                                                                                            
+DEBUG util.py:421:  [SKIPPED] systemd-pam-230-3.gitea68351.fc25.x86_64.rpm: Already downloaded                                                                                             
+DEBUG util.py:421:  [SKIPPED] aajohan-comfortaa-fonts-2.004-6.fc24.noarch.rpm: Already downloaded                                                                                          
+DEBUG util.py:421:  (98/101): gtk-update-icon-cache-3.21.4-1.fc25.x86_64.rpm                                                                                 31 kB/s |  33 kB     00:01    
+DEBUG util.py:421:  (99/101): python-2.7.12-1.fc25.x86_64.rpm                                                                                                57 kB/s |  95 kB     00:01    
+DEBUG util.py:421:  (100/101): python-devel-2.7.12-1.fc25.x86_64.rpm                                                                                        102 kB/s | 404 kB     00:03    
+DEBUG util.py:421:  (101/101): python-libs-2.7.12-1.fc25.x86_64.rpm                                                                                          62 kB/s | 5.8 MB     01:36    
+DEBUG util.py:421:  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DEBUG util.py:421:  Total                                                                                                                                    65 kB/s | 6.4 MB     01:39     
+DEBUG util.py:421:  Running transaction check
+DEBUG util.py:421:  Transaction check succeeded.
+DEBUG util.py:421:  Running transaction test
+DEBUG util.py:421:  Transaction test succeeded.
+DEBUG util.py:421:  Running transaction
+DEBUG util.py:421:    Installing  : atk-2.20.0-1.fc25.x86_64                                                                                                                          1/103 
+DEBUG util.py:421:    Installing  : dbus-libs-1:1.11.2-1.fc25.x86_64                                                                                                                  2/103 
+DEBUG util.py:421:    Installing  : libcroco-0.6.11-2.fc24.x86_64                                                                                                                     3/103 
+DEBUG util.py:421:    Installing  : libpng-2:1.6.23-1.fc25.x86_64                                                                                                                     4/103 
+DEBUG util.py:421:    Installing  : freetype-2.6.5-1.fc25.x86_64                                                                                                                      5/103 
+DEBUG util.py:421:    Upgrading   : python-libs-2.7.12-1.fc25.x86_64                                                                                                                  6/103 
+DEBUG util.py:421:    Upgrading   : python-2.7.12-1.fc25.x86_64                                                                                                                       7/103 
+DEBUG util.py:421:    Installing  : libjpeg-turbo-1.5.0-1.fc25.x86_64                                                                                                                 8/103 
+DEBUG util.py:421:    Installing  : dbus-glib-0.106-1.fc24.x86_64                                                                                                                     9/103 
+DEBUG util.py:421:    Installing  : libseccomp-2.3.1-1.fc25.x86_64                                                                                                                   10/103 
+DEBUG util.py:421:    Installing  : libxshmfence-1.2-3.fc24.x86_64                                                                                                                   11/103 
+DEBUG util.py:421:    Installing  : libwayland-server-1.11.0-1.fc25.x86_64                                                                                                           12/103 
+DEBUG util.py:421:    Installing  : libwayland-client-1.11.0-1.fc25.x86_64                                                                                                           13/103 
+DEBUG util.py:421:    Installing  : fontpackages-filesystem-1.44-17.fc24.noarch                                                                                                      14/103 
+DEBUG util.py:421:    Installing  : libICE-1.0.9-5.fc25.x86_64                                                                                                                       15/103 
+DEBUG util.py:421:    Installing  : libSM-1.2.2-4.fc24.x86_64                                                                                                                        16/103 
+DEBUG util.py:421:    Installing  : aajohan-comfortaa-fonts-2.004-6.fc24.noarch                                                                                                      17/103 
+DEBUG util.py:421:    Installing  : fontconfig-2.12.0-1.fc25.x86_64                                                                                                                  18/103 
+DEBUG util.py:421:    Installing  : dbus-python-1.2.4-1.fc25.x86_64                                                                                                                  19/103 
+DEBUG util.py:421:    Installing  : jasper-libs-1.900.1-32.fc24.x86_64                                                                                                               20/103 
+DEBUG util.py:421:    Installing  : python-simplejson-3.5.3-5.fc24.x86_64                                                                                                            21/103 
+DEBUG util.py:421:    Installing  : python-six-1.10.0-2.fc24.noarch                                                                                                                  22/103 
+DEBUG util.py:421:    Installing  : python2-dateutil-1:2.5.3-1.fc25.noarch                                                                                                           23/103 
+DEBUG util.py:421:    Installing  : python2-decorator-4.0.10-1.fc25.noarch                                                                                                           24/103 
+DEBUG util.py:421:    Installing  : sugar-base-0.98.0-7.fc24.x86_64                                                                                                                  25/103 
+DEBUG util.py:421:    Installing  : pygobject2-2.28.6-15.fc24.x86_64                                                                                                                 26/103 
+DEBUG util.py:421:    Installing  : gettext-libs-0.19.8.1-1.fc25.x86_64                                                                                                              27/103 
+DEBUG util.py:421:    Installing  : avahi-libs-0.6.32-1.fc25.x86_64                                                                                                                  28/103 
+DEBUG util.py:421:    Installing  : cups-libs-1:2.2-0.1b2.fc25.x86_64                                                                                                                29/103 
+DEBUG util.py:421:    Installing  : python3-libs-3.5.1-12.fc25.x86_64                                                                                                                30/103 
+DEBUG util.py:421:    Installing  : python3-pip-8.1.2-1.fc25.noarch                                                                                                                  31/103 
+DEBUG util.py:421:    Installing  : python3-setuptools-24.0.1-1.fc25.noarch                                                                                                          32/103 
+DEBUG util.py:421:    Installing  : python3-3.5.1-12.fc25.x86_64                                                                                                                     33/103 
+DEBUG util.py:421:    Installing  : gettext-0.19.8.1-1.fc25.x86_64                                                                                                                   34/103 
+DEBUG util.py:421:    Installing  : libpcap-14:1.7.4-2.fc24.x86_64                                                                                                                   35/103 
+DEBUG util.py:421:    Installing  : iptables-libs-1.6.0-1.fc25.x86_64                                                                                                                36/103 
+DEBUG util.py:421:    Installing  : qrencode-libs-3.4.2-6.fc24.x86_64                                                                                                                37/103 
+DEBUG util.py:421:    Installing  : kmod-libs-22-4.fc25.x86_64                                                                                                                       38/103 
+DEBUG util.py:421:    Installing  : acl-2.2.52-11.fc24.x86_64                                                                                                                        39/103 
+DEBUG util.py:421:    Installing  : systemd-pam-230-3.gitea68351.fc25.x86_64                                                                                                         40/103 
+DEBUG util.py:421:    Installing  : systemd-230-3.gitea68351.fc25.x86_64                                                                                                             41/103 
+DEBUG util.py:421:    Installing  : dbus-1:1.11.2-1.fc25.x86_64                                                                                                                      42/103 
+DEBUG util.py:421:    Installing  : python2-rpm-macros-3-10.fc25.noarch                                                                                                              43/103 
+DEBUG util.py:421:    Installing  : python-rpm-macros-3-10.fc25.noarch                                                                                                               44/103 
+DEBUG util.py:421:    Installing  : hwdata-0.290-1.fc25.noarch                                                                                                                       45/103 
+DEBUG util.py:421:    Installing  : libpciaccess-0.13.4-3.fc24.x86_64                                                                                                                46/103 
+DEBUG util.py:421:    Installing  : libdrm-2.4.68-1.fc25.x86_64                                                                                                                      47/103 
+DEBUG util.py:421:    Installing  : mesa-libgbm-12.0.1-1.fc25.x86_64                                                                                                                 48/103 
+DEBUG util.py:421:    Installing  : jbigkit-libs-2.1-5.fc24.x86_64                                                                                                                   49/103 
+DEBUG util.py:421:    Installing  : libtiff-4.0.6-2.fc24.x86_64                                                                                                                      50/103 
+DEBUG util.py:421:    Installing  : xapian-core-libs-1.2.23-1.fc25.x86_64                                                                                                            51/103 
+DEBUG util.py:421:    Installing  : xapian-bindings-1.2.23-1.fc25.x86_64                                                                                                             52/103 
+DEBUG util.py:421:    Installing  : xapian-bindings-python-1.2.23-1.fc25.x86_64                                                                                                      53/103 
+DEBUG util.py:421:    Installing  : sugar-datastore-0.108.1-1.fc25.x86_64                                                                                                            54/103 
+DEBUG util.py:421:    Installing  : libdatrie-0.2.9-3.fc25.x86_64                                                                                                                    55/103 
+DEBUG util.py:421:    Installing  : libthai-0.1.24-1.fc24.x86_64                                                                                                                     56/103 
+DEBUG util.py:421:    Installing  : graphite2-1.3.6-1.fc25.x86_64                                                                                                                    57/103 
+DEBUG util.py:421:    Installing  : harfbuzz-1.2.7-1.fc25.x86_64                                                                                                                     58/103 
+DEBUG util.py:421:    Installing  : psmisc-22.21-8.fc24.x86_64                                                                                                                       59/103 
+DEBUG util.py:421:    Installing  : polkit-libs-0.113-5.fc24.x86_64                                                                                                                  60/103 
+DEBUG util.py:421:    Installing  : GConf2-3.2.6-16.fc24.x86_64                                                                                                                      61/103 
+DEBUG util.py:421:    Installing  : mesa-libglapi-12.0.1-1.fc25.x86_64                                                                                                               62/103 
+DEBUG util.py:421:    Installing  : libXau-1.0.8-6.fc24.x86_64                                                                                                                       63/103 
+DEBUG util.py:421:    Installing  : libxcb-1.12-1.fc25.x86_64                                                                                                                        64/103 
+DEBUG util.py:421:    Installing  : python-xpyb-1.3.1-6.fc24.x86_64                                                                                                                  65/103 
+DEBUG util.py:421:    Installing  : libX11-common-1.6.3-3.fc24.noarch                                                                                                                66/103 
+DEBUG util.py:421:    Installing  : libX11-1.6.3-3.fc24.x86_64                                                                                                                       67/103 
+DEBUG util.py:421:    Installing  : libXext-1.3.3-4.fc24.x86_64                                                                                                                      68/103 
+DEBUG util.py:421:    Installing  : libXrender-0.9.9-3.fc24.x86_64                                                                                                                   69/103 
+DEBUG util.py:421:    Installing  : libXfixes-5.0.2-2.fc25.x86_64                                                                                                                    70/103 
+DEBUG util.py:421:    Installing  : libXdamage-1.1.4-8.fc24.x86_64                                                                                                                   71/103 
+DEBUG util.py:421:    Installing  : libXcursor-1.1.14-6.fc24.x86_64                                                                                                                  72/103 
+DEBUG util.py:421:    Installing  : libXrandr-1.5.0-3.fc24.x86_64                                                                                                                    73/103 
+DEBUG util.py:421:    Installing  : libXft-2.3.2-4.fc24.x86_64                                                                                                                       74/103 
+DEBUG util.py:421:    Installing  : libXi-1.7.6-2.fc24.x86_64                                                                                                                        75/103 
+DEBUG util.py:421:    Installing  : libXinerama-1.1.3-6.fc24.x86_64                                                                                                                  76/103 
+DEBUG util.py:421:    Installing  : libXxf86vm-1.1.4-3.fc24.x86_64                                                                                                                   77/103 
+DEBUG util.py:421:    Installing  : mesa-libGL-12.0.1-1.fc25.x86_64                                                                                                                  78/103 
+DEBUG util.py:421:    Installing  : mesa-libEGL-12.0.1-1.fc25.x86_64                                                                                                                 79/103 
+DEBUG util.py:421:    Installing  : libXcomposite-0.4.4-8.fc24.x86_64                                                                                                                80/103 
+DEBUG util.py:421:    Installing  : hicolor-icon-theme-0.15-3.fc24.noarch                                                                                                            81/103 
+DEBUG util.py:421:    Installing  : shared-mime-info-1.6-3.fc25.x86_64                                                                                                               82/103 
+DEBUG util.py:421:    Installing  : gdk-pixbuf2-2.35.2-1.fc25.x86_64                                                                                                                 83/103 
+DEBUG util.py:421:    Installing  : gdk-pixbuf2-modules-2.35.2-1.fc25.x86_64                                                                                                         84/103 
+DEBUG util.py:421:    Installing  : gtk-update-icon-cache-3.21.4-1.fc25.x86_64                                                                                                       85/103 
+DEBUG util.py:421:    Installing  : pixman-0.34.0-2.fc24.x86_64                                                                                                                      86/103 
+DEBUG util.py:421:    Installing  : cairo-1.14.6-1.fc25.x86_64                                                                                                                       87/103 
+DEBUG util.py:421:    Installing  : pango-1.40.1-1.fc25.x86_64                                                                                                                       88/103 
+DEBUG util.py:421:    Installing  : gtk2-2.24.30-2.fc25.x86_64                                                                                                                       89/103 
+DEBUG util.py:421:    Installing  : librsvg2-2.40.16-1.fc25.x86_64                                                                                                                   90/103 
+DEBUG util.py:421:    Installing  : gnome-python2-rsvg-2.32.0-23.fc24.x86_64                                                                                                         91/103 
+DEBUG util.py:421:    Installing  : hippo-canvas-0.3.0-18.fc24.x86_64                                                                                                                92/103 
+DEBUG util.py:421:    Installing  : hippo-canvas-python-0.3.0-18.fc24.x86_64                                                                                                         93/103 
+DEBUG util.py:421:    Installing  : pycairo-1.10.0-4.fc24.x86_64                                                                                                                     94/103 
+DEBUG util.py:421:    Installing  : pygtk2-2.24.0-14.fc25.x86_64                                                                                                                     95/103 
+DEBUG util.py:421:    Installing  : gnome-python2-2.28.1-17.fc24.x86_64                                                                                                              96/103 
+DEBUG util.py:421:    Installing  : gnome-python2-gconf-2.28.1-17.fc24.x86_64                                                                                                        97/103 
+DEBUG util.py:421:    Installing  : alsa-lib-1.1.1-1.fc25.x86_64                                                                                                                     98/103 
+DEBUG util.py:421:    Installing  : sugar-toolkit-0.98.1-10.fc24.x86_64                                                                                                              99/103 
+DEBUG util.py:421:    Installing  : python-devel-2.7.12-1.fc25.x86_64                                                                                                               100/103 
+DEBUG util.py:421:    Installing  : desktop-file-utils-0.23-1.fc25.x86_64                                                                                                           101/103 
+DEBUG util.py:421:    Cleanup     : python-2.7.11-8.fc25.x86_64                                                                                                                     102/103 
+DEBUG util.py:421:    Cleanup     : python-libs-2.7.11-8.fc25.x86_64                                                                                                                103/103 
+DEBUG util.py:421:  Running in chroot, ignoring request.
+DEBUG util.py:421:    Verifying   : desktop-file-utils-0.23-1.fc25.x86_64                                                                                                             1/103 
+DEBUG util.py:421:    Verifying   : sugar-toolkit-0.98.1-10.fc24.x86_64                                                                                                               2/103 
+DEBUG util.py:421:    Verifying   : alsa-lib-1.1.1-1.fc25.x86_64                                                                                                                      3/103 
+DEBUG util.py:421:    Verifying   : atk-2.20.0-1.fc25.x86_64                                                                                                                          4/103 
+DEBUG util.py:421:    Verifying   : cairo-1.14.6-1.fc25.x86_64                                                                                                                        5/103 
+DEBUG util.py:421:    Verifying   : fontconfig-2.12.0-1.fc25.x86_64                                                                                                                   6/103 
+DEBUG util.py:421:    Verifying   : freetype-2.6.5-1.fc25.x86_64                                                                                                                      7/103 
+DEBUG util.py:421:    Verifying   : gdk-pixbuf2-2.35.2-1.fc25.x86_64                                                                                                                  8/103 
+DEBUG util.py:421:    Verifying   : gettext-0.19.8.1-1.fc25.x86_64                                                                                                                    9/103 
+DEBUG util.py:421:    Verifying   : gnome-python2-gconf-2.28.1-17.fc24.x86_64                                                                                                        10/103 
+DEBUG util.py:421:    Verifying   : gnome-python2-rsvg-2.32.0-23.fc24.x86_64                                                                                                         11/103 
+DEBUG util.py:421:    Verifying   : gtk2-2.24.30-2.fc25.x86_64                                                                                                                       12/103 
+DEBUG util.py:421:    Verifying   : hippo-canvas-python-0.3.0-18.fc24.x86_64                                                                                                         13/103 
+DEBUG util.py:421:    Verifying   : libICE-1.0.9-5.fc25.x86_64                                                                                                                       14/103 
+DEBUG util.py:421:    Verifying   : libSM-1.2.2-4.fc24.x86_64                                                                                                                        15/103 
+DEBUG util.py:421:    Verifying   : pango-1.40.1-1.fc25.x86_64                                                                                                                       16/103 
+DEBUG util.py:421:    Verifying   : python-simplejson-3.5.3-5.fc24.x86_64                                                                                                            17/103 
+DEBUG util.py:421:    Verifying   : python2-dateutil-1:2.5.3-1.fc25.noarch                                                                                                           18/103 
+DEBUG util.py:421:    Verifying   : sugar-base-0.98.0-7.fc24.x86_64                                                                                                                  19/103 
+DEBUG util.py:421:    Verifying   : sugar-datastore-0.108.1-1.fc25.x86_64                                                                                                            20/103 
+DEBUG util.py:421:    Verifying   : libX11-1.6.3-3.fc24.x86_64                                                                                                                       21/103 
+DEBUG util.py:421:    Verifying   : libXext-1.3.3-4.fc24.x86_64                                                                                                                      22/103 
+DEBUG util.py:421:    Verifying   : libXrender-0.9.9-3.fc24.x86_64                                                                                                                   23/103 
+DEBUG util.py:421:    Verifying   : libpng-2:1.6.23-1.fc25.x86_64                                                                                                                    24/103 
+DEBUG util.py:421:    Verifying   : libxcb-1.12-1.fc25.x86_64                                                                                                                        25/103 
+DEBUG util.py:421:    Verifying   : mesa-libEGL-12.0.1-1.fc25.x86_64                                                                                                                 26/103 
+DEBUG util.py:421:    Verifying   : mesa-libGL-12.0.1-1.fc25.x86_64                                                                                                                  27/103 
+DEBUG util.py:421:    Verifying   : pixman-0.34.0-2.fc24.x86_64                                                                                                                      28/103 
+DEBUG util.py:421:    Verifying   : fontpackages-filesystem-1.44-17.fc24.noarch                                                                                                      29/103 
+DEBUG util.py:421:    Verifying   : shared-mime-info-1.6-3.fc25.x86_64                                                                                                               30/103 
+DEBUG util.py:421:    Verifying   : gettext-libs-0.19.8.1-1.fc25.x86_64                                                                                                              31/103 
+DEBUG util.py:421:    Verifying   : libcroco-0.6.11-2.fc24.x86_64                                                                                                                    32/103 
+DEBUG util.py:421:    Verifying   : GConf2-3.2.6-16.fc24.x86_64                                                                                                                      33/103 
+DEBUG util.py:421:    Verifying   : gnome-python2-2.28.1-17.fc24.x86_64                                                                                                              34/103 
+DEBUG util.py:421:    Verifying   : librsvg2-2.40.16-1.fc25.x86_64                                                                                                                   35/103 
+DEBUG util.py:421:    Verifying   : cups-libs-1:2.2-0.1b2.fc25.x86_64                                                                                                                36/103 
+DEBUG util.py:421:    Verifying   : gdk-pixbuf2-modules-2.35.2-1.fc25.x86_64                                                                                                         37/103 
+DEBUG util.py:421:    Verifying   : gtk-update-icon-cache-3.21.4-1.fc25.x86_64                                                                                                       38/103 
+DEBUG util.py:421:    Verifying   : hicolor-icon-theme-0.15-3.fc24.noarch                                                                                                            39/103 
+DEBUG util.py:421:    Verifying   : libXcomposite-0.4.4-8.fc24.x86_64                                                                                                                40/103 
+DEBUG util.py:421:    Verifying   : libXcursor-1.1.14-6.fc24.x86_64                                                                                                                  41/103 
+DEBUG util.py:421:    Verifying   : libXdamage-1.1.4-8.fc24.x86_64                                                                                                                   42/103 
+DEBUG util.py:421:    Verifying   : libXfixes-5.0.2-2.fc25.x86_64                                                                                                                    43/103 
+DEBUG util.py:421:    Verifying   : libXi-1.7.6-2.fc24.x86_64                                                                                                                        44/103 
+DEBUG util.py:421:    Verifying   : libXinerama-1.1.3-6.fc24.x86_64                                                                                                                  45/103 
+DEBUG util.py:421:    Verifying   : libXrandr-1.5.0-3.fc24.x86_64                                                                                                                    46/103 
+DEBUG util.py:421:    Verifying   : hippo-canvas-0.3.0-18.fc24.x86_64                                                                                                                47/103 
+DEBUG util.py:421:    Verifying   : harfbuzz-1.2.7-1.fc25.x86_64                                                                                                                     48/103 
+DEBUG util.py:421:    Verifying   : libXft-2.3.2-4.fc24.x86_64                                                                                                                       49/103 
+DEBUG util.py:421:    Verifying   : libthai-0.1.24-1.fc24.x86_64                                                                                                                     50/103 
+DEBUG util.py:421:    Verifying   : python-six-1.10.0-2.fc24.noarch                                                                                                                  51/103 
+DEBUG util.py:421:    Verifying   : python2-decorator-4.0.10-1.fc25.noarch                                                                                                           52/103 
+DEBUG util.py:421:    Verifying   : xapian-bindings-python-1.2.23-1.fc25.x86_64                                                                                                      53/103 
+DEBUG util.py:421:    Verifying   : libX11-common-1.6.3-3.fc24.noarch                                                                                                                54/103 
+DEBUG util.py:421:    Verifying   : libXau-1.0.8-6.fc24.x86_64                                                                                                                       55/103 
+DEBUG util.py:421:    Verifying   : libdrm-2.4.68-1.fc25.x86_64                                                                                                                      56/103 
+DEBUG util.py:421:    Verifying   : libwayland-client-1.11.0-1.fc25.x86_64                                                                                                           57/103 
+DEBUG util.py:421:    Verifying   : libwayland-server-1.11.0-1.fc25.x86_64                                                                                                           58/103 
+DEBUG util.py:421:    Verifying   : libxshmfence-1.2-3.fc24.x86_64                                                                                                                   59/103 
+DEBUG util.py:421:    Verifying   : mesa-libgbm-12.0.1-1.fc25.x86_64                                                                                                                 60/103 
+DEBUG util.py:421:    Verifying   : libXxf86vm-1.1.4-3.fc24.x86_64                                                                                                                   61/103 
+DEBUG util.py:421:    Verifying   : mesa-libglapi-12.0.1-1.fc25.x86_64                                                                                                               62/103 
+DEBUG util.py:421:    Verifying   : dbus-glib-0.106-1.fc24.x86_64                                                                                                                    63/103 
+DEBUG util.py:421:    Verifying   : dbus-libs-1:1.11.2-1.fc25.x86_64                                                                                                                 64/103 
+DEBUG util.py:421:    Verifying   : polkit-libs-0.113-5.fc24.x86_64                                                                                                                  65/103 
+DEBUG util.py:421:    Verifying   : psmisc-22.21-8.fc24.x86_64                                                                                                                       66/103 
+DEBUG util.py:421:    Verifying   : pygtk2-2.24.0-14.fc25.x86_64                                                                                                                     67/103 
+DEBUG util.py:421:    Verifying   : avahi-libs-0.6.32-1.fc25.x86_64                                                                                                                  68/103 
+DEBUG util.py:421:    Verifying   : jasper-libs-1.900.1-32.fc24.x86_64                                                                                                               69/103 
+DEBUG util.py:421:    Verifying   : libjpeg-turbo-1.5.0-1.fc25.x86_64                                                                                                                70/103 
+DEBUG util.py:421:    Verifying   : libtiff-4.0.6-2.fc24.x86_64                                                                                                                      71/103 
+DEBUG util.py:421:    Verifying   : graphite2-1.3.6-1.fc25.x86_64                                                                                                                    72/103 
+DEBUG util.py:421:    Verifying   : libdatrie-0.2.9-3.fc25.x86_64                                                                                                                    73/103 
+DEBUG util.py:421:    Verifying   : xapian-bindings-1.2.23-1.fc25.x86_64                                                                                                             74/103 
+DEBUG util.py:421:    Verifying   : xapian-core-libs-1.2.23-1.fc25.x86_64                                                                                                            75/103 
+DEBUG util.py:421:    Verifying   : libpciaccess-0.13.4-3.fc24.x86_64                                                                                                                76/103 
+DEBUG util.py:421:    Verifying   : jbigkit-libs-2.1-5.fc24.x86_64                                                                                                                   77/103 
+DEBUG util.py:421:    Verifying   : hwdata-0.290-1.fc25.noarch                                                                                                                       78/103 
+DEBUG util.py:421:    Verifying   : python-devel-2.7.12-1.fc25.x86_64                                                                                                                79/103 
+DEBUG util.py:421:    Verifying   : python-rpm-macros-3-10.fc25.noarch                                                                                                               80/103 
+DEBUG util.py:421:    Verifying   : python2-rpm-macros-3-10.fc25.noarch                                                                                                              81/103 
+DEBUG util.py:421:    Verifying   : dbus-python-1.2.4-1.fc25.x86_64                                                                                                                  82/103 
+DEBUG util.py:421:    Verifying   : pycairo-1.10.0-4.fc24.x86_64                                                                                                                     83/103 
+DEBUG util.py:421:    Verifying   : pygobject2-2.28.6-15.fc24.x86_64                                                                                                                 84/103 
+DEBUG util.py:421:    Verifying   : python-xpyb-1.3.1-6.fc24.x86_64                                                                                                                  85/103 
+DEBUG util.py:421:    Verifying   : systemd-230-3.gitea68351.fc25.x86_64                                                                                                             86/103 
+DEBUG util.py:421:    Verifying   : acl-2.2.52-11.fc24.x86_64                                                                                                                        87/103 
+DEBUG util.py:421:    Verifying   : iptables-libs-1.6.0-1.fc25.x86_64                                                                                                                88/103 
+DEBUG util.py:421:    Verifying   : kmod-libs-22-4.fc25.x86_64                                                                                                                       89/103 
+DEBUG util.py:421:    Verifying   : libseccomp-2.3.1-1.fc25.x86_64                                                                                                                   90/103 
+DEBUG util.py:421:    Verifying   : qrencode-libs-3.4.2-6.fc24.x86_64                                                                                                                91/103 
+DEBUG util.py:421:    Verifying   : libpcap-14:1.7.4-2.fc24.x86_64                                                                                                                   92/103 
+DEBUG util.py:421:    Verifying   : python3-3.5.1-12.fc25.x86_64                                                                                                                     93/103 
+DEBUG util.py:421:    Verifying   : python3-libs-3.5.1-12.fc25.x86_64                                                                                                                94/103 
+DEBUG util.py:421:    Verifying   : python3-pip-8.1.2-1.fc25.noarch                                                                                                                  95/103 
+DEBUG util.py:421:    Verifying   : python3-setuptools-24.0.1-1.fc25.noarch                                                                                                          96/103 
+DEBUG util.py:421:    Verifying   : dbus-1:1.11.2-1.fc25.x86_64                                                                                                                      97/103 
+DEBUG util.py:421:    Verifying   : systemd-pam-230-3.gitea68351.fc25.x86_64                                                                                                         98/103 
+DEBUG util.py:421:    Verifying   : aajohan-comfortaa-fonts-2.004-6.fc24.noarch                                                                                                      99/103 
+DEBUG util.py:421:    Verifying   : python-2.7.12-1.fc25.x86_64                                                                                                                     100/103 
+DEBUG util.py:421:    Verifying   : python-libs-2.7.12-1.fc25.x86_64                                                                                                                101/103 
+DEBUG util.py:421:    Verifying   : python-libs-2.7.11-8.fc25.x86_64                                                                                                                102/103 
+DEBUG util.py:421:    Verifying   : python-2.7.11-8.fc25.x86_64                                                                                                                     103/103 
+DEBUG util.py:421:  Installed:
+DEBUG util.py:421:    GConf2.x86_64 3.2.6-16.fc24                            aajohan-comfortaa-fonts.noarch 2.004-6.fc24             acl.x86_64 2.2.52-11.fc24                              
+DEBUG util.py:421:    alsa-lib.x86_64 1.1.1-1.fc25                           atk.x86_64 2.20.0-1.fc25                                avahi-libs.x86_64 0.6.32-1.fc25                        
+DEBUG util.py:421:    cairo.x86_64 1.14.6-1.fc25                             cups-libs.x86_64 1:2.2-0.1b2.fc25                       dbus.x86_64 1:1.11.2-1.fc25                            
+DEBUG util.py:421:    dbus-glib.x86_64 0.106-1.fc24                          dbus-libs.x86_64 1:1.11.2-1.fc25                        dbus-python.x86_64 1.2.4-1.fc25                        
+DEBUG util.py:421:    desktop-file-utils.x86_64 0.23-1.fc25                  fontconfig.x86_64 2.12.0-1.fc25                         fontpackages-filesystem.noarch 1.44-17.fc24            
+DEBUG util.py:421:    freetype.x86_64 2.6.5-1.fc25                           gdk-pixbuf2.x86_64 2.35.2-1.fc25                        gdk-pixbuf2-modules.x86_64 2.35.2-1.fc25               
+DEBUG util.py:421:    gettext.x86_64 0.19.8.1-1.fc25                         gettext-libs.x86_64 0.19.8.1-1.fc25                     gnome-python2.x86_64 2.28.1-17.fc24                    
+DEBUG util.py:421:    gnome-python2-gconf.x86_64 2.28.1-17.fc24              gnome-python2-rsvg.x86_64 2.32.0-23.fc24                graphite2.x86_64 1.3.6-1.fc25                          
+DEBUG util.py:421:    gtk-update-icon-cache.x86_64 3.21.4-1.fc25             gtk2.x86_64 2.24.30-2.fc25                              harfbuzz.x86_64 1.2.7-1.fc25                           
+DEBUG util.py:421:    hicolor-icon-theme.noarch 0.15-3.fc24                  hippo-canvas.x86_64 0.3.0-18.fc24                       hippo-canvas-python.x86_64 0.3.0-18.fc24               
+DEBUG util.py:421:    hwdata.noarch 0.290-1.fc25                             iptables-libs.x86_64 1.6.0-1.fc25                       jasper-libs.x86_64 1.900.1-32.fc24                     
+DEBUG util.py:421:    jbigkit-libs.x86_64 2.1-5.fc24                         kmod-libs.x86_64 22-4.fc25                              libICE.x86_64 1.0.9-5.fc25                             
+DEBUG util.py:421:    libSM.x86_64 1.2.2-4.fc24                              libX11.x86_64 1.6.3-3.fc24                              libX11-common.noarch 1.6.3-3.fc24                      
+DEBUG util.py:421:    libXau.x86_64 1.0.8-6.fc24                             libXcomposite.x86_64 0.4.4-8.fc24                       libXcursor.x86_64 1.1.14-6.fc24                        
+DEBUG util.py:421:    libXdamage.x86_64 1.1.4-8.fc24                         libXext.x86_64 1.3.3-4.fc24                             libXfixes.x86_64 5.0.2-2.fc25                          
+DEBUG util.py:421:    libXft.x86_64 2.3.2-4.fc24                             libXi.x86_64 1.7.6-2.fc24                               libXinerama.x86_64 1.1.3-6.fc24                        
+DEBUG util.py:421:    libXrandr.x86_64 1.5.0-3.fc24                          libXrender.x86_64 0.9.9-3.fc24                          libXxf86vm.x86_64 1.1.4-3.fc24                         
+DEBUG util.py:421:    libcroco.x86_64 0.6.11-2.fc24                          libdatrie.x86_64 0.2.9-3.fc25                           libdrm.x86_64 2.4.68-1.fc25                            
+DEBUG util.py:421:    libjpeg-turbo.x86_64 1.5.0-1.fc25                      libpcap.x86_64 14:1.7.4-2.fc24                          libpciaccess.x86_64 0.13.4-3.fc24                      
+DEBUG util.py:421:    libpng.x86_64 2:1.6.23-1.fc25                          librsvg2.x86_64 2.40.16-1.fc25                          libseccomp.x86_64 2.3.1-1.fc25                         
+DEBUG util.py:421:    libthai.x86_64 0.1.24-1.fc24                           libtiff.x86_64 4.0.6-2.fc24                             libwayland-client.x86_64 1.11.0-1.fc25                 
+DEBUG util.py:421:    libwayland-server.x86_64 1.11.0-1.fc25                 libxcb.x86_64 1.12-1.fc25                               libxshmfence.x86_64 1.2-3.fc24                         
+DEBUG util.py:421:    mesa-libEGL.x86_64 12.0.1-1.fc25                       mesa-libGL.x86_64 12.0.1-1.fc25                         mesa-libgbm.x86_64 12.0.1-1.fc25                       
+DEBUG util.py:421:    mesa-libglapi.x86_64 12.0.1-1.fc25                     pango.x86_64 1.40.1-1.fc25                              pixman.x86_64 0.34.0-2.fc24                            
+DEBUG util.py:421:    polkit-libs.x86_64 0.113-5.fc24                        psmisc.x86_64 22.21-8.fc24                              pycairo.x86_64 1.10.0-4.fc24                           
+DEBUG util.py:421:    pygobject2.x86_64 2.28.6-15.fc24                       pygtk2.x86_64 2.24.0-14.fc25                            python-devel.x86_64 2.7.12-1.fc25                      
+DEBUG util.py:421:    python-rpm-macros.noarch 3-10.fc25                     python-simplejson.x86_64 3.5.3-5.fc24                   python-six.noarch 1.10.0-2.fc24                        
+DEBUG util.py:421:    python-xpyb.x86_64 1.3.1-6.fc24                        python2-dateutil.noarch 1:2.5.3-1.fc25                  python2-decorator.noarch 4.0.10-1.fc25                 
+DEBUG util.py:421:    python2-rpm-macros.noarch 3-10.fc25                    python3.x86_64 3.5.1-12.fc25                            python3-libs.x86_64 3.5.1-12.fc25                      
+DEBUG util.py:421:    python3-pip.noarch 8.1.2-1.fc25                        python3-setuptools.noarch 24.0.1-1.fc25                 qrencode-libs.x86_64 3.4.2-6.fc24                      
+DEBUG util.py:421:    shared-mime-info.x86_64 1.6-3.fc25                     sugar-base.x86_64 0.98.0-7.fc24                         sugar-datastore.x86_64 0.108.1-1.fc25                  
+DEBUG util.py:421:    sugar-toolkit.x86_64 0.98.1-10.fc24                    systemd.x86_64 230-3.gitea68351.fc25                    systemd-pam.x86_64 230-3.gitea68351.fc25               
+DEBUG util.py:421:    xapian-bindings.x86_64 1.2.23-1.fc25                   xapian-bindings-python.x86_64 1.2.23-1.fc25             xapian-core-libs.x86_64 1.2.23-1.fc25                  
+DEBUG util.py:421:  Upgraded:
+DEBUG util.py:421:    python.x86_64 2.7.12-1.fc25                                                      python-libs.x86_64 2.7.12-1.fc25                                                     
+DEBUG util.py:421:  Complete!
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:287:  Unsharing. Flags: 134217728
+DEBUG backend.py:442:  Copying packages to result dir
+DEBUG util.py:180:  kill orphans
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf/'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/pts'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/shm'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:546:  Child return code was: 0
+DEBUG util.py:567:  child environment: None
+DEBUG util.py:499:  Executing command: ['btrfs', 'subv', 'list', '/var/lib/mock'] with env {'HOME': '/builddir', 'TERM': 'vt100', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.utf8', 'HOSTNAME': 'mock', 'SHELL': '/bin/sh'} and shell False
+DEBUG util.py:421:  ERROR: not a btrfs filesystem: /var/lib/mock
+DEBUG util.py:421:  ERROR: can't access '/var/lib/mock'
+DEBUG util.py:546:  Child return code was: 1
+DEBUG util.py:1187:  Please ignore the error above above about btrfs.
