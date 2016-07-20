@@ -275,9 +275,12 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
-* Mon Jul 18 2016 Omar Berroteran <omarberroteranlkf@gmail.com> -1.0.4-4
+* Wed Jul 20 2016 Omar Berroteran <omarberroteranlkf@gmail.com> -1.0.4-4
 - Bump to the new upstream version
 - changes on Apicaro
+
+* Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.4-4
+- https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
 
 * Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.4-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
