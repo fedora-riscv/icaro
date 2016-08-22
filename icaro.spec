@@ -37,6 +37,7 @@ Requires:	sugar
 Requires:	hicolor-icon-theme
 Requires:	gnome-python2-rsvg
 Requires:	vte
+Requires:	python-matplotlib
 
 %description
 An educational robotic software aimed to develop robotic 
@@ -275,6 +276,9 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Wed Jul 20 2016 Omar Berroteran <omarberroteranlkf@gmail.com> -1.0.5.2
+  Requires:	python-matplotlib
+
 * Wed Jul 20 2016 Omar Berroteran <omarberroteranlkf@gmail.com> -1.0.4-4
 - Bump to the new upstream version
 - changes on Apicaro
