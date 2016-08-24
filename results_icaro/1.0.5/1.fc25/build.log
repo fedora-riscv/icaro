@@ -704,3 +704,709 @@ Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.scOI7P
 + /usr/bin/rm -rf /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64
 + exit 0
 Child return code was: 0
+Mock Version: 1.2.20
+ENTER ['do'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/icaro.spec'], logger=<mockbuild.trace_decorator.getLog object at 0x7f1e4750e470>shell=FalsechrootPath='/var/lib/mock/fedora-25-x86_64/root'user='mockbuild'timeout=0printOutput=Truegid=135env={'PS1': '<mock-chroot> \\s-\\v\\$ ', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'LANG': 'en_US.utf8', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'TERM': 'vt100', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"'}uid=1000)
+Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/icaro.spec'] with env {'PS1': '<mock-chroot> \\s-\\v\\$ ', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'LANG': 'en_US.utf8', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'TERM': 'vt100', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"'} and shell False
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /builddir/build/SRPMS/icaro-1.0.5-1.fc25.src.rpm
+Child return code was: 0
+ENTER ['do'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/icaro.spec'], logger=<mockbuild.trace_decorator.getLog object at 0x7f1e4750e470>shell=FalsechrootPath='/var/lib/mock/fedora-25-x86_64/root'user='mockbuild'timeout=0env={'PS1': '<mock-chroot> \\s-\\v\\$ ', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'LANG': 'en_US.utf8', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'TERM': 'vt100', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"'}uid=1000gid=135printOutput=Trueprivate_network=True)
+Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/icaro.spec'] with env {'PS1': '<mock-chroot> \\s-\\v\\$ ', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'LANG': 'en_US.utf8', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'TERM': 'vt100', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"'} and shell False
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.iiAZjr
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2
++ /usr/bin/gzip -dc /builddir/build/SOURCES/icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2.tar.gz
++ /usr/bin/tar -xof -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ chmod -v 0644 COPYING AUTHORS COPYING-LGPLv2
+mode of 'COPYING' retained as 0644 (rw-r--r--)
+mode of 'AUTHORS' retained as 0644 (rw-r--r--)
+mode of 'COPYING-LGPLv2' retained as 0644 (rw-r--r--)
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.CRoZK8
++ umask 022
++ cd /builddir/build/BUILD
++ cd icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.skedcQ
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64 '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64
+++ dirname /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64
++ cd icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2
++ /usr/bin/python2 apicaro/setup.py install --root /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64
+running install
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/apicaro
+copying apicaro/setup.py -> build/lib/apicaro
+copying apicaro/apicaro.py -> build/lib/apicaro
+copying apicaro/__init__.py -> build/lib/apicaro
+running install_lib
+creating /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr
+creating /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib
+creating /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7
+creating /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages
+creating /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages/apicaro
+copying build/lib/apicaro/setup.py -> /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages/apicaro
+copying build/lib/apicaro/apicaro.py -> /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages/apicaro
+copying build/lib/apicaro/__init__.py -> /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages/apicaro
+byte-compiling /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages/apicaro/setup.py to setup.pyc
+byte-compiling /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages/apicaro/apicaro.py to apicaro.pyc
+byte-compiling /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages/apicaro/__init__.py to __init__.pyc
+running install_egg_info
+Writing /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/lib/python2.7/site-packages/apicaro-1.0-py2.7.egg-info
++ mkdir -p /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/
++ cp -p -a hardware imagenes locale paletas clemente /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/
++ install -p -m 0644 __init__.py abrir.py carga_componentes.py componente.py componente_inicial.py config_menu.py crear.py creditos.py forma_basica.py graficador_matplot.py guardar.py gui_clemente.py icaro.py lanzador.py lenguaje.py main.py motor.py mouse.py navegador.py nuevo.py terminal_vte.py tooltips.py utilidades_ventana.py visor.py version /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/
++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64 -name '*.po'
++ xargs rm -f
++ xargs rm -f
++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64 -name '*.pot'
++ xargs rm -f
++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64 -name '#template.pde#'
++ /usr/lib/rpm/find-lang.sh /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64 icaro
++ mkdir -p /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/sugar/activities//TurtleBlocks.activity/plugins/icaro/
++ cp -a plugintortucaro/icaro/__init__.py plugintortucaro/icaro/icaro.py plugintortucaro/icaro/icons /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/sugar/activities//TurtleBlocks.activity/plugins/icaro/
++ mkdir -p /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/sugar/activities//TurtleBlocks.activity/plugins/icaro/icons
++ cp -a plugintortucaro/icaro/icons/icarooff.svg plugintortucaro/icaro/icons/icaroon.svg /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/sugar/activities//TurtleBlocks.activity/plugins/icaro/icons
++ mkdir -p /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/etc/udev/rules.d/
++ install -p -m 0644 udev/026-microchip.rules udev/26-microchip.rules udev/41-microchip.rules udev/99-mm-usb-device-blacklist.rules udev/99-serial.rules /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/etc/udev/rules.d/
++ mkdir -p /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/bin
++ cat
++ install -p -m 0755 icaro /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/bin/icaro
++ mkdir -p /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icons/hicolor/48x48/apps/
++ install -p -D -m 0644 imagenes/icarologo.png /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icons/hicolor/48x48/apps/
++ desktop-file-install --dir /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/applications icaro.desktop
++ SAVEIFS=' 	
+'
+++ echo -en '\n\b'
++ IFS='
+'
+++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/share/icaro -type f -perm /a+x
+++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f -name '*~'
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  -name '\''*~'\''`'
++ rm -rf /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/micro/firmware/tmp/typedef.h~
++ IFS=' 	
+'
+++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f '!' -perm /a+x -name '*.py'
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/creditos.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/creditos.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/guardar.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/guardar.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/lanzador.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/lanzador.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/utilidades_ventana.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/utilidades_ventana.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/icr.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/icr.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/cli.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/cli.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/clemente.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/clemente.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/screen.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/screen.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/clemente/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/tooltips.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/tooltips.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/navegador.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/navegador.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/icaro.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/icaro.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/abrir.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/abrir.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/componente_inicial.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/componente_inicial.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/nuevo.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/nuevo.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/config_menu.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/config_menu.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/lenguaje.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/lenguaje.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/gui_clemente.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/gui_clemente.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/crear.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/crear.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/visor.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/visor.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/componente.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/componente.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/forma_basica.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/forma_basica.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/carga_componentes.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/carga_componentes.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/mouse.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/mouse.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/terminal_vte.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/terminal_vte.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/util.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/util.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/comp.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/comp.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/docker.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/docker.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/carga.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/carga.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/modulos/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/ping/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/ping/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/ping/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/ping/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/ping_init/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/ping_init/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/ping_init/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/ping_init/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/05-sensores-esp/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/sino/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/sino/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/sino/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/sino/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/case/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/case/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/case/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/case/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/switch/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/switch/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/switch/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/switch/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/mientras/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/mientras/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/mientras/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/mientras/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/break/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/break/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/break/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/break/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/repetir/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/repetir/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/repetir/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/repetir/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/default/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/default/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/default/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/default/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/si/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/si/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/si/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/si/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/06-estructuras_de_control/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/char/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/char/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/char/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/char/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/long/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/long/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/long/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/long/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/int/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/int/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/int/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/int/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/07-tipos_de_datos/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo1/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo1/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo1/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo1/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo2/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo2/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo2/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo2/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo5/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo5/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo5/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo5/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servos/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servos/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servos/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servos/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo4/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo4/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo4/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo3/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo3/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_init/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_init/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_disponible/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_disponible/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_recibir/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_recibir/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_env/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_env/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran7/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran7/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig1/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig1/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran5/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran5/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran3/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran3/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig3/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig3/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran1/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran1/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig4/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig4/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig2/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo4/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo3/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/servo3/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/03-servo-motores/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_init/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_init/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_disponible/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_disponible/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_recibir/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_recibir/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_env/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/usb_env/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/10-usb_bulk/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran7/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran7/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig1/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig1/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran5/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran5/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran3/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran3/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig3/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig3/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran1/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran1/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig4/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig4/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig2/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig2/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran8/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran8/__init__.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensordig2/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran8/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran8/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran4/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran4/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran2/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran2/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran6/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran6/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_limpiar/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_limpiar/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_cursor/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_cursor/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_home/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_home/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_numeros/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_numeros/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_init/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_init/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_impr/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_impr/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/activar/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/activar/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/robot/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/robot/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/pausa/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran4/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran4/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran2/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran2/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran6/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/04-sensores/sensoran6/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_limpiar/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_limpiar/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_cursor/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_cursor/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_home/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_home/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_numeros/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_numeros/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_init/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_init/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_impr/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/lcd_impr/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/08-pantalla-lcd/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/activar/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/activar/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/robot/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/robot/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/pausa/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/pausa/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/pausa_Us/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/pausa_Us/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/datos/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/pausa/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/pausa_Us/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/pausa_Us/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/datos/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/datos/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/enviocdc/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/enviocdc/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/cdc_init/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/cdc_init/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/recepcioncdc/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/recepcioncdc/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/enviocdcchar/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/enviocdcchar/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/parar/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/parar/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/derecha/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/derecha/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/izquierda/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/izquierda/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m2at/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m2at/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m1ad/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m1ad/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/atras/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/atras/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m1at/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m1at/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m2ad/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m2ad/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/adelante/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/datos/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/01-icaro/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/enviocdc/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/enviocdc/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/cdc_init/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/cdc_init/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/recepcioncdc/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/recepcioncdc/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/enviocdcchar/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/enviocdcchar/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/09-cdc/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/parar/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/parar/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/derecha/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/derecha/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/izquierda/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/izquierda/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m2at/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m2at/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m1ad/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m1ad/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/atras/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/atras/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m1at/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m1at/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m2ad/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/m2ad/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/adelante/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/adelante/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/inv_de/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/inv_de/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/inv_iz/bloque.py
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/adelante/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/inv_de/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/inv_de/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/inv_iz/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/inv_iz/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/linea/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/linea/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/comentarios/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/comentarios/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/incluir/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/incluir/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/carga_func/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/carga_func/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/accion/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/accion/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/siguiente/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/siguiente/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/definir/bloque.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/definir/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/main.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/graficador_matplot.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/motor.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro/setup.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro/apicaro.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro/__init__.py' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/inv_iz/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/02-motor/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/linea/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/linea/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/comentarios/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/comentarios/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/incluir/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/incluir/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/carga_func/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/carga_func/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/accion/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/accion/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/siguiente/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/siguiente/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/definir/bloque.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/11-otros/definir/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/core/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/componentes/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/hardware/icaro/__init__.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/main.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/graficador_matplot.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/motor.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro/__init__.py
+++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/icaro -type f '!' -perm /a+x -name '*.py'
+find: '/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/icaro': No such file or directory
+++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro -type f '!' -perm /a+x -name '*.py'
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro/setup.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro/apicaro.py
++ for file in '`find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro -type f  ! -perm /a+x -name '\''*.py'\''`'
++ chmod -vR a+x /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64//usr/lib/python2.7/site-packages/apicaro/__init__.py
++ find /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/icaro -name __init__.py
++ xargs chmod 0644
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /builddir/build/BUILD/icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
+find: 'debug': No such file or directory
++ /usr/lib/rpm/check-buildroot
+Processing files: icaro-1.0.5-1.fc25.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.4jgkoy
++ umask 022
++ cd /builddir/build/BUILD
++ cd icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2
++ DOCDIR=/builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/doc/icaro
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/doc/icaro
++ cp -pr COPYING /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/doc/icaro
++ cp -pr AUTHORS /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/doc/icaro
++ cp -pr COPYING-LGPLv2 /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64/usr/share/doc/icaro
++ exit 0
+Provides: application() application(icaro.desktop) config(icaro) = 1.0.5-1.fc25 icaro = 1.0.5-1.fc25 python2.7dist(apicaro) = 1.0
+Requires(interp): /bin/sh /bin/sh /bin/sh
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires(post): /bin/sh
+Requires(postun): /bin/sh
+Requires(posttrans): /bin/sh
+Requires: /bin/bash /usr/bin/env /usr/bin/python python(abi) = 2.7
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64
+Wrote: /builddir/build/RPMS/icaro-1.0.5-1.fc25.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.WDDSXm
++ umask 022
++ cd /builddir/build/BUILD
++ cd icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/icaro-1.0.5-1.fc25.x86_64
++ exit 0
+Child return code was: 0
