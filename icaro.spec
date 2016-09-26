@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.5
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -278,6 +278,9 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Mon Sep 26 2016 Dominik Mierzejewski <rpm@greysector.net> - 1.0.5-3
+- rebuilt for matplotlib-2.0.0
+
 * Tue Aug 23 2016 Omar Berroteran <omarberroteranlkf@gmail.com> -1.0.5-2
 +  Requires:	python-matplotlib
 
