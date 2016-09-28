@@ -5,7 +5,7 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit 1.0.6
+%global commit ae3492fb7ec14bb542196fea3170fbbcd2e93e51
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.6
@@ -15,7 +15,7 @@ Summary:	Robotic Educational Project
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
-Source0:	https://github.com/valentinbasel/icaro/archive/v1.0.6.tar.gz
+Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
