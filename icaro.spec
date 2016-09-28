@@ -5,17 +5,17 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit 89db1132864b0b7e815cdbba0e87e5902de35bc2
+%global commit ae3492fb7ec14bb542196fea3170fbbcd2e93e51
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
-Version:	1.0.5
-Release:	3%{?dist}
+Version:	1.0.6
+Release:	1%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
-Source0:	https://github.com/valentinbasel/icaro/archive/89db1132864b0b7e815cdbba0e87e5902de35bc2/icaro-89db1132864b0b7e815cdbba0e87e5902de35bc2.tar.gz
+Source0:	https://github.com/valentinbasel/icaro/archive/v1.0.6.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
@@ -278,6 +278,12 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Mon Sep 28 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.6
+- Bump to the new upstream version
+- Firmware Tortucaro set pause time to 10
+- se resetea el pic. ahora tiene una espera de 20 seg donde prende y apaga el led1 y con eso estabiliza la comunicación entre el pic y la pc
+- 
+
 * Mon Sep 26 2016 Dominik Mierzejewski <rpm@greysector.net> - 1.0.5-3
 - rebuilt for matplotlib-2.0.0
 
