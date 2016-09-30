@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=icaro
+Comment=
+Terminal=false
+Type=Application
+Categories=GTK;Education;
+Icon=icarologo
+Exec=icaro
+Name[es_ES]=icaro
