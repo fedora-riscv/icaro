@@ -15,7 +15,7 @@ Summary:	Robotic Educational Project
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
-Source0:	https://github.com/valentinbasel/icaro/archive/v1.0.6.tar.gz
+Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
