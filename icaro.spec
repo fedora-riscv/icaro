@@ -278,10 +278,10 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
-* Mon Nov 12 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.7
+* Sat Nov 12 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.7
 - Bump to the new upstream version
 
-* Mon Sep 28 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.6
+* Wed Sep 28 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.6
 - Bump to the new upstream version
 - Firmware Tortucaro set pause time to 10
 - se resetea el pic. ahora tiene una espera de 20 seg donde prende y apaga el led1 y con eso estabiliza la comunicación entre el pic y la pc
