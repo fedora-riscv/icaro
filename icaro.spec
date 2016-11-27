@@ -47,7 +47,7 @@ An educational robotic software aimed to develop robotic
 and programming fundamentals.
 
 %prep
-%setup -q -n %{name}-%{commit}
+%setup -q %{name}-%{commit}
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
