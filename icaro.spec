@@ -47,7 +47,7 @@ and programming fundamentals.
 
 # Cambiado porque no compilaba
 %prep
-%setup -q %{commit}
+%setup -q -n %{name}-%{commit}
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
