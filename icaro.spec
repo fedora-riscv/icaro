@@ -5,17 +5,18 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit 385d4161762181dae78328a9ea6803d4092f103a
+%global commit 3b0939bdace56f13a1666b7087b401e8bb06df92
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
-Version:	1.0.7
-Release:	2%{?dist}
+Version:	1.0.8
+Release:	1%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
-Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
+Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
+
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
@@ -25,7 +26,6 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
 Requires:	pycairo
 Requires:	pygtk2
-Requires:	pywebkitgtk
 Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
@@ -278,8 +278,12 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
-* Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.7-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+* Thu Apr 13 2017 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.8
+- Bump to the new upstream version
+- Remove pyWebKit dependence
+- most bugfixes, improbe performance
+- new firmware and boot options
+- Icaro Plugins changes 
 
 * Sat Nov 12 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.7
 - Bump to the new upstream version
