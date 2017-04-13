@@ -45,8 +45,9 @@ Requires:	python-matplotlib
 An educational robotic software aimed to develop robotic 
 and programming fundamentals.
 
+# Cambiado porque no compilaba
 %prep
-%setup -q %{name}-%{commit}
+%setup -q %{commit}
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
