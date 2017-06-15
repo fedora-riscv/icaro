@@ -21,11 +21,12 @@ Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 Source1:	README.ENG
 BuildArch:	noarch
 
-BuildRequires:	python2-devel
+BuildRequires:	%{py2_dist}
 BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
 Requires:	pycairo
 Requires:	pygtk2
+Requires:	%{py2_dist}
 Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
@@ -34,8 +35,8 @@ Requires:	python-tools
 Requires:	sugar-turtleart
 Requires:	pyserial
 Requires:	sugar
-Requires:	hicolor-icon-theme
-Requires:	gnome-python2-rsvg
+#Requires:	hicolor-icon-theme
+#Requires:	gnome-python2-rsvg
 Requires:	vte
 Requires:	pyserial
 Requires:	sugar
