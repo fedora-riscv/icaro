@@ -49,7 +49,8 @@ and programming fundamentals.
 
 # Cambiado porque no compilaba antes, agregue -q, luego a autosetup
 %prep
-%autosetup -q -n %{name}-%{version}
+#%setup -q -n %{name}-%{commit}
+%autosetup  -n %{name}-%{version}
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
