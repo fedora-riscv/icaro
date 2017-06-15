@@ -21,12 +21,13 @@ Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 Source1:	README.ENG
 BuildArch:	noarch
 
-BuildRequires:	%{py2_dist}
+BuildRequires:  python2-devel 
+#BuildRequires:	%{py2_dist}
 BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
 Requires:	pycairo
 Requires:	pygtk2
-Requires:	%{py2_dist}
+#Requires:	%{py2_dist}
 Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
@@ -46,9 +47,9 @@ Requires:	python-matplotlib
 An educational robotic software aimed to develop robotic 
 and programming fundamentals.
 
-# Cambiado porque no compilaba
+# Cambiado porque no compilaba antes, agregue -q, luego a autosetup
 %prep
-%setup -q -n %{name}-%{commit}
+%autosetup -q -n %{name}-%{version}
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
@@ -69,6 +70,7 @@ chmod -v 0644 COPYING AUTHORS COPYING-LGPLv2
 
 %build
 #Nothing to build
+%py2_build
 
 %install
 # ------------- Apicaro -------------------------------------
