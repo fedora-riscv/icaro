@@ -5,7 +5,7 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit 10165151a5806f3298bec76de66464f90c406b02
+%global commit 3b0939bdace56f13a1666b7087b401e8bb06df92
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
@@ -15,10 +15,14 @@ Summary:	Robotic Educational Project
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
-Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
+#Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
+Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
+
 # Add README in english
-#Source1:	README.ENG
+Source1:	README.ENG
 BuildArch:	noarch
+ExclusiveArch: %{ix86} %{arm} x86_64 noarch
+
 
 BuildRequires:	python2-devel
 BuildRequires:	desktop-file-utils
@@ -43,7 +47,8 @@ An educational robotic software aimed to develop robotic
 and programming fundamentals.
 
 %prep
-%setup -q -n %{name}-%{commit}
+%autosetup -n %{name}-%{commit}            
+#%setup -q -n %{name}-%{commit}
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
