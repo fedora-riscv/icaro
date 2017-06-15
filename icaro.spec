@@ -1,5 +1,5 @@
 %global  __os_install_post %{nil}
-%if 0%{?fedora} >= 18
+%if 0%{?fedora} >= 22
 %global activity TurtleBlocks.activity
 %else
 %global activity TurtleArt.activity
@@ -11,6 +11,8 @@ Name:		icaro
 Version:	1.0.8
 Release:	1%{?dist}
 Summary:	Robotic Educational Project
+
+
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
@@ -20,9 +22,10 @@ Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
+ExclusiveArch: %{ix86} %{arm} x86_64 noarch
 
-BuildRequires:  python2-devel 
-#BuildRequires:	%{py2_dist}
+BuildRequires:  python2-devel
+BuildRequires:  python2-setuptools
 BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
 Requires:	pycairo
@@ -44,13 +47,12 @@ Requires:	sugar
 Requires:	python-matplotlib
 
 %description
-An educational robotic software aimed to develop robotic 
-and programming fundamentals.
+An educational robotic software aimed to develop robotic and programming fundamentals.
 
 # Cambiado porque no compilaba antes, agregue -q, luego a autosetup
 %prep
-#%setup -q -n %{name}-%{commit}
-%autosetup  -n %{name}-%{version}
+#%setup -q -n %{name}-%{commit} / {version}
+%autosetup  -n %{name}-%{commit}
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
