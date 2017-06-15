@@ -1,9 +1,0 @@
-*.swp
-*.pyc
-*.~
-.*.swp
-.project
-.pydevproject
-.settings
-*.vim
-*.nja
