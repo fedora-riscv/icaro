@@ -25,7 +25,7 @@ BuildArch:	noarch
 ExclusiveArch: %{ix86} %{arm} x86_64 noarch
 
 BuildRequires:  python2-devel
-BuildRequires:  python2-setuptools
+#BuildRequires:  python2-setuptools
 BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
 Requires:	pycairo
@@ -44,7 +44,7 @@ Requires:	sugar
 Requires:	vte
 Requires:	pyserial
 Requires:	sugar
-Requires:	python-matplotlib
+Requires:	python2-matplotlib
 
 %description
 An educational robotic software aimed to develop robotic and programming fundamentals.
@@ -73,7 +73,6 @@ chmod -v 0644 COPYING AUTHORS COPYING-LGPLv2
 
 %build
 #Nothing to build
-%py2_build
 
 %install
 # ------------- Apicaro -------------------------------------
