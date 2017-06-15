@@ -167,8 +167,14 @@ fi
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/version
-%dir %{_datadir}/%{name}/hardware/icaro/componentes
-%{_datadir}/%{name}/hardware/icaro/componentes/*
+%dir %{_datadir}/%{name}/hardware/
+%dir %{_datadir}/%{name}/hardware/icaro
+%dir %{_datadir}/%{name}/hardware/icaro/v2/componentes
+%dir %{_datadir}/%{name}/hardware/icaro/v4/componentes
+
+%{_datadir}/%{name}/hardware/icaro/*
+%{_datadir}/%{name}/hardware/icaro/v2/componentes/*
+%{_datadir}/%{name}/hardware/icaro/v4/componentes/*
 
 %dir %{_datadir}/%{name}/imagenes
 %{_datadir}/%{name}/imagenes/*.png
@@ -192,71 +198,113 @@ fi
 %{_datadir}/%{name}/imagenes/mouse/*.svg
 %{_datadir}/%{name}/imagenes/gif/*.gif
 
-%dir %{_datadir}/%{name}/hardware/icaro/ejemplos
-%{_datadir}/%{name}/hardware/icaro/ejemplos/*
+%dir %{_datadir}/%{name}/hardware/icaro/v2/ejemplos
+%{_datadir}/%{name}/hardware/icaro/v2/ejemplos/*
+%dir %{_datadir}/%{name}/hardware/icaro/v4/ejemplos
+%{_datadir}/%{name}/hardware/icaro/v4/ejemplos/*
+
+
 
 %{_datadir}/%{name}/imagenes/*.svg
 # Pinguino Firmware
 # Exception granted by fpc
 # For more details, see https://fedorahosted.org/fpc/ticket/253
 
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/lib
-%{_datadir}/%{name}/hardware/icaro/imagenes/componentes/*.png
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lib
+%{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes/*.png
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lib
+%{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes/*.png
 
-%{_datadir}/%{name}/hardware/icaro/imagenes/gif/*.gif
-%{_datadir}/%{name}/hardware/icaro/imagenes/*.png
+%{_datadir}/%{name}/hardware/icaro/v2/imagenes/gif/*.gif
+%{_datadir}/%{name}/hardware/icaro/v2/imagenes/*.png
+%{_datadir}/%{name}/hardware/icaro/v4/imagenes/gif/*.gif
+%{_datadir}/%{name}/hardware/icaro/v4/imagenes/*.png
+
 
 # rpmlint complains for this file. arch-independent-package-contains-binary-or-object error
 # Really not intended as a file for be executed in Fedora host.
 
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/lib/*.lib
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/lkr
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lib/*.lib
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lkr
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lib/*.lib
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lkr
 
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/icaro_lib/*.h
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/icaro_lib/*.c
+
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/icaro_lib/*.h
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/icaro_lib/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib/*.h
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib/*.c
 
 
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/pilas/*.c
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/pilas/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/pilas/*.c
 
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/tortucaro/*.c
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/icaroblue/*.c
-
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/tortucaro/*.c
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/icaroblue/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/tortucaro/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/icaroblue/*.c
 
 %{_datadir}/%{name}/hardware/icaro/*.py
+%{_datadir}/%{name}/hardware/icaro/v2/*.py
+%{_datadir}/%{name}/hardware/icaro/v4/*.py
 
 %{_datadir}/%{name}/hardware/*.py
-%{_datadir}/%{name}/hardware/icaro/modulos/*.py
-%{_datadir}/%{name}/hardware/icaro/micro/conf/*.ini
+%{_datadir}/%{name}/hardware/icaro/v2/modulos/*.py
+%{_datadir}/%{name}/hardware/icaro/v4/modulos/*.py
+%{_datadir}/%{name}/hardware/icaro/v2/micro/conf/*.ini
+%{_datadir}/%{name}/hardware/icaro/v4/micro/conf/*.ini
 
 
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lkr/*.lkr
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/icaro_lib
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/*.c
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/*.pde
+#
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lkr/*.lkr
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/*.pde
 
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/lkr/*.lkr
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/icaro_lib
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/source
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/*.c
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/source/*.pde
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/include/pic16
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/include/pic16/*.h
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/include/pic16
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/include/pic16/*.h
 
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/non-free/include/pic16
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/non-free/include/pic16/*.h
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/lib/pic16
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/lib/pic16/*.lib
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/lib/pic16
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/lib/pic16/*.lib
 
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/non-free/lib/pic16
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/non-free/lib/pic16/*.lib
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/*.c
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/*.h
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/*.h
 
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/*.c
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/*.h
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb/*.c
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb/*.h
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb/*.h
 
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/usb
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/usb/*.c
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/usb/*.h
+
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/temporal/
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/stdout
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/temporal/
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/stdout
+
+%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/obj
+%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/obj/*.o
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/obj
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/obj/*.o
 
 
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/temporal/
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/tmp/stdout
-
-%dir %{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/obj
-%{_datadir}/%{name}/hardware/icaro/micro/firmware/pic16/obj/*.o
 
 
 # This is not sugar activity, is a plugin for turtleart
@@ -281,9 +329,9 @@ fi
 %changelog
 * Thu Apr 13 2017 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.8
 - Bump to the new upstream version
-- Remove pyWebKit dependence
+- Remove pyWebKit dependence because fedora 26  compatibility
 - most bugfixes, improbe performance
-- new firmware and boot options
+- new firmwares and boot options
 - Icaro Plugins changes 
 
 * Sat Nov 12 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.7
