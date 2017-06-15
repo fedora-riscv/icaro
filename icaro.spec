@@ -29,7 +29,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
 Requires:	pycairo
 Requires:	pygtk2
-#Requires:	pywebkitgtk
+#Requires:	pywebkitgtk no compatibility Fedora 26+
 Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
@@ -39,7 +39,7 @@ Requires:	sugar-turtleart
 Requires:	pyserial
 Requires:	sugar
 #Requires:	hicolor-icon-themei
-Requires:	python-matplotlib
+Requires:	python2-matplotlib
 #Requires:	gnome-python2-rsvg
 
 %description
@@ -48,7 +48,6 @@ and programming fundamentals.
 
 %prep
 %autosetup -n %{name}-%{commit}            
-#%setup -q -n %{name}-%{commit}
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
@@ -306,6 +305,41 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Thu Apr 13 2017 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.8
+- Bump to the new upstream version (April 10, 2017)
+- Remove pyWebKit dependence because fedora 26  compatibility
+- most bugfixes, improbe performance
+- new firmwares and boot options
+- Icaro Plugins changes 
+
+* Sat Nov 12 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.7
+- Bump to the new upstream version
+
+* Wed Sep 28 2016 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.6
+- Bump to the new upstream version
+- Firmware Tortucaro set pause time to 10
+- se resetea el pic. ahora tiene una espera de 20 seg donde prende y apaga el led1 y con eso estabiliza la comunicación entre el pic y la pc
+- 
+
+* Mon Sep 26 2016 Dominik Mierzejewski <rpm@greysector.net> - 1.0.5-3
+- rebuilt for matplotlib-2.0.0
+
+* Tue Aug 23 2016 Omar Berroteran <omarberroteranlkf@gmail.com> -1.0.5-2
++  Requires:	python-matplotlib
+
+* Wed Jul 20 2016 Omar Berroteran <omarberroteranlkf@gmail.com> -1.0.4-4
+- Bump to the new upstream version
+- changes on Apicaro
+
+* Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.4-4
+- https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
+
+* Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.4-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
+* Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.4-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Sat Jan 10 2015 Eduardo Echeverria <echevemaster@gmail.com>  - 1.0.4-1
 - Bump to the new upstream version
 
