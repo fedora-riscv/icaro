@@ -15,17 +15,21 @@ Summary:	Robotic Educational Project
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
+#Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
 Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
+ExclusiveArch: %{ix86} %{arm} x86_64 noarch
+
 
 BuildRequires:	python2-devel
 BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
 Requires:	pycairo
 Requires:	pygtk2
+#Requires:	pywebkitgtk no compatibility Fedora 26+
 Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
@@ -34,20 +38,16 @@ Requires:	python-tools
 Requires:	sugar-turtleart
 Requires:	pyserial
 Requires:	sugar
-Requires:	hicolor-icon-theme
-Requires:	gnome-python2-rsvg
-Requires:	vte
-Requires:	pyserial
-Requires:	sugar
-Requires:	python-matplotlib
+#Requires:	hicolor-icon-themei
+Requires:	python2-matplotlib
+#Requires:	gnome-python2-rsvg
 
 %description
 An educational robotic software aimed to develop robotic 
 and programming fundamentals.
 
-# Cambiado porque no compilaba
 %prep
-%setup -q -n %{name}-%{commit}
+%autosetup -n %{name}-%{commit}            
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
@@ -94,6 +94,10 @@ mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/
 cp -a plugintortucaro/icaro/* %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/
 mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/icons
 cp -a plugintortucaro/icaro/icons/* %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/icons
+#mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/libreria
+#cp -a plugintortucaro/icaro/libreria/*%{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/libreria
+
+
 
 
 mkdir -p %{buildroot}%{_sysconfdir}/udev/rules.d/
@@ -167,14 +171,12 @@ fi
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/version
-%dir %{_datadir}/%{name}/hardware/
-%dir %{_datadir}/%{name}/hardware/icaro
 %dir %{_datadir}/%{name}/hardware/icaro/v2/componentes
-%dir %{_datadir}/%{name}/hardware/icaro/v4/componentes
-
-%{_datadir}/%{name}/hardware/icaro/*
 %{_datadir}/%{name}/hardware/icaro/v2/componentes/*
+%dir %{_datadir}/%{name}/hardware/icaro/v4/componentes
 %{_datadir}/%{name}/hardware/icaro/v4/componentes/*
+
+
 
 %dir %{_datadir}/%{name}/imagenes
 %{_datadir}/%{name}/imagenes/*.png
@@ -198,11 +200,14 @@ fi
 %{_datadir}/%{name}/imagenes/mouse/*.svg
 %{_datadir}/%{name}/imagenes/gif/*.gif
 
+%dir %{_datadir}/%{name}/hardware/icaro/
+%{_datadir}/%{name}/hardware/icaro/*
+
 %dir %{_datadir}/%{name}/hardware/icaro/v2/ejemplos
 %{_datadir}/%{name}/hardware/icaro/v2/ejemplos/*
+
 %dir %{_datadir}/%{name}/hardware/icaro/v4/ejemplos
 %{_datadir}/%{name}/hardware/icaro/v4/ejemplos/*
-
 
 
 %{_datadir}/%{name}/imagenes/*.svg
@@ -213,12 +218,15 @@ fi
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lib
 %{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes/*.png
+
+%{_datadir}/%{name}/hardware/icaro/v2/imagenes/gif/*.gif
+%{_datadir}/%{name}/hardware/icaro/v2/imagenes/*.png
+
+
 %dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16
 %dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lib
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes/*.png
 
-%{_datadir}/%{name}/hardware/icaro/v2/imagenes/gif/*.gif
-%{_datadir}/%{name}/hardware/icaro/v2/imagenes/*.png
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/gif/*.gif
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/*.png
 
@@ -228,33 +236,23 @@ fi
 
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lib/*.lib
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lkr
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lib/*.lib
-%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lkr
-
 
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/icaro_lib/*.h
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/icaro_lib/*.c
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib/*.h
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib/*.c
 
 
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/pilas/*.c
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/pilas/*.c
 
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/tortucaro/*.c
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/icaroblue/*.c
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/tortucaro/*.c
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/icaroblue/*.c
 
-%{_datadir}/%{name}/hardware/icaro/*.py
+
 %{_datadir}/%{name}/hardware/icaro/v2/*.py
-%{_datadir}/%{name}/hardware/icaro/v4/*.py
 
 %{_datadir}/%{name}/hardware/*.py
 %{_datadir}/%{name}/hardware/icaro/v2/modulos/*.py
-%{_datadir}/%{name}/hardware/icaro/v4/modulos/*.py
 %{_datadir}/%{name}/hardware/icaro/v2/micro/conf/*.ini
-%{_datadir}/%{name}/hardware/icaro/v4/micro/conf/*.ini
+
 
 
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lkr/*.lkr
@@ -262,49 +260,27 @@ fi
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/*.c
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/*.pde
-#
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lkr/*.lkr
-%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib
-%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/*.c
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/*.pde
 
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/include/pic16
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/include/pic16/*.h
-%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/include/pic16
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/include/pic16/*.h
 
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/lib/pic16
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/lib/pic16/*.lib
-%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/lib/pic16
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/lib/pic16/*.lib
 
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/*.c
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/*.h
-%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/*.c
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/*.h
 
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb/*.c
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb/*.h
-%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb/*.c
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb/*.h
 
 
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/temporal/
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/stdout
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/temporal/
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/stdout
 
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/obj
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/obj/*.o
-%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/obj
-%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/obj/*.o
-
-
 
 
 # This is not sugar activity, is a plugin for turtleart
@@ -314,6 +290,8 @@ fi
 
 %dir %{sugaractivitydir}/%{activity}/plugins/icaro/icons/
 %{sugaractivitydir}/%{activity}/plugins/icaro/icons/*.svg
+%dir %{sugaractivitydir}/%{activity}/plugins/icaro/libreria/
+%{sugaractivitydir}/%{activity}/plugins/icaro/libreria/*.py
 
 %{python_sitelib}/apicaro*egg*
 %{python_sitelib}/apicaro/
@@ -328,7 +306,7 @@ fi
 
 %changelog
 * Thu Apr 13 2017 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.8
-- Bump to the new upstream version
+- Bump to the new upstream version (April 10, 2017)
 - Remove pyWebKit dependence because fedora 26  compatibility
 - most bugfixes, improbe performance
 - new firmwares and boot options
