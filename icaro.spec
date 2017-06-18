@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -39,6 +39,8 @@ Requires:	sugar-turtleart
 Requires:	pyserial
 Requires:	sugar
 #Requires:	hicolor-icon-themei
+#Requires:	gnome-python2-rsvg
+Requires:	vte
 Requires:	python2-matplotlib
 #Requires:	gnome-python2-rsvg
 
