@@ -1,15 +1,15 @@
 %global  __os_install_post %{nil}
-%if 0%{?fedora} >= 18
+%if 0%{?fedora} >= 22
 %global activity TurtleBlocks.activity
 %else
 %global activity TurtleArt.activity
 %endif
 
-%global commit 3b0939bdace56f13a1666b7087b401e8bb06df92
+%global commit dc3683ab9de51e474347d8aeb39afb567016e15a
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -173,8 +173,8 @@ fi
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/version
-%dir %{_datadir}/%{name}/hardware/icaro/v2/componentes
-%{_datadir}/%{name}/hardware/icaro/v2/componentes/*
+#%dir %{_datadir}/%{name}/hardware/icaro/v2/componentes
+#%{_datadir}/%{name}/hardware/icaro/v2/componentes/*
 %dir %{_datadir}/%{name}/hardware/icaro/v4/componentes
 %{_datadir}/%{name}/hardware/icaro/v4/componentes/*
 
@@ -307,6 +307,10 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Thu Apr 13 2017 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.8-3
+- Changes to Apicaro to improve stability on BootLoader v4 de Pingüino.
+- Set the BootLoader v4 to default.
+
 * Thu Apr 13 2017 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.8
 - Bump to the new upstream version (April 10, 2017)
 - Remove pyWebKit dependence because fedora 26  compatibility
