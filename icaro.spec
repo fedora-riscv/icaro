@@ -1,5 +1,5 @@
 %global  __os_install_post %{nil}
-%if 0%{?fedora} >= 18
+%if 0%{?fedora} >= 22
 %global activity TurtleBlocks.activity
 %else
 %global activity TurtleArt.activity
