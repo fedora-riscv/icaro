@@ -169,7 +169,7 @@ fi
 
 %files -f %{name}.lang
 %doc COPYING AUTHORS COPYING-LGPLv2 
-README.ENG 
+#README.ENG 
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/version
