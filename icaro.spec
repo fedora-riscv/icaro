@@ -5,7 +5,7 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit dd62bae1c6b82246425b37f28dd0b01f7a44c9a7
+%global commit dc3683ab9de51e474347d8aeb39afb567016e15a
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
@@ -169,12 +169,12 @@ fi
 
 %files -f %{name}.lang
 %doc COPYING AUTHORS COPYING-LGPLv2 
-#README.ENG 
+README.ENG 
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/version
-%dir %{_datadir}/%{name}/hardware/icaro/v2/componentes
-%{_datadir}/%{name}/hardware/icaro/v2/componentes/*
+#%dir %{_datadir}/%{name}/hardware/icaro/v2/componentes
+#%{_datadir}/%{name}/hardware/icaro/v2/componentes/*
 %dir %{_datadir}/%{name}/hardware/icaro/v4/componentes
 %{_datadir}/%{name}/hardware/icaro/v4/componentes/*
 
