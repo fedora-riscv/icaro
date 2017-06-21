@@ -1,5 +1,5 @@
 %global  __os_install_post %{nil}
-%if 0%{?fedora} >= 22
+%if 0%{?fedora} >= 25
 %global activity TurtleBlocks.activity
 %else
 %global activity TurtleArt.activity
@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
-Release:	1%{?dist}
+Release:	3%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
