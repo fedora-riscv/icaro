@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -307,6 +307,9 @@ fi
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Wed Jul 26 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.8-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
 * Thu Apr 13 2017 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.8-3
 - Changes to Apicaro to improve stability on BootLoader v4 de Pingüino.
 - Set the BootLoader v4 to default.
