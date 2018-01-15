@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -27,16 +27,16 @@ ExclusiveArch: %{ix86} %{arm} x86_64 noarch
 BuildRequires:	python2-devel
 BuildRequires:	desktop-file-utils
 BuildRequires:	sugar-toolkit
-Requires:	pycairo
+Requires:	python2-cairo
 Requires:	pygtk2
 #Requires:	pywebkitgtk no compatibility Fedora 26+
 Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
-Requires:	pyusb
-Requires:	python-tools
+Requires:	python2-pyusb
+Requires:	python2-tools
 Requires:	sugar-turtleart
-Requires:	pyserial
+Requires:	python2-pyserial
 Requires:	sugar
 #Requires:	hicolor-icon-themei
 #Requires:	gnome-python2-rsvg
@@ -295,6 +295,10 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Mon Jan 15 2018 Iryna Shcherbina <ishcherb@redhat.com> - 1.0.8-6
+- Update Python 2 dependency declarations to new packaging standards
+  (See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3)
+
 * Thu Jan 11 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 1.0.8-5
 - Remove obsolete scriptlets
 
