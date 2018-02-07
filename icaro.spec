@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
-Release:	6%{?dist}
+Release:	7%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -295,6 +295,9 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.8-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Mon Jan 15 2018 Iryna Shcherbina <ishcherb@redhat.com> - 1.0.8-6
 - Update Python 2 dependency declarations to new packaging standards
   (See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3)
