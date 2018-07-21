@@ -5,7 +5,7 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit dc3683ab9de51e474347d8aeb39afb567016e15a
+%global commit 21e0b02f0bc3ed9e59d133e075787e2fa796c64d
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.8
