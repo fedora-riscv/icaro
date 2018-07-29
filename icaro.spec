@@ -283,8 +283,8 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %dir %{sugaractivitydir}/%{activity}/plugins/icaro/libreria/
 %{sugaractivitydir}/%{activity}/plugins/icaro/libreria/*.py
 
-%{python_sitelib}/apicaro*egg*
-%{python_sitelib}/apicaro/
+%{python2_sitelib}/apicaro*egg*
+%{python2_sitelib}/apicaro/
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/48x48/apps/icarologo.png
