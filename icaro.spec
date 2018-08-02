@@ -80,7 +80,7 @@ chmod -v 0644 COPYING AUTHORS COPYING-LGPLv2
 # ------------- Icaro ---------------------------------------
 mkdir -p %{buildroot}%{_datadir}/%{name}/
 
-cp -p -a  {hardware,imagenes,locale,clemente} %{buildroot}%{_datadir}/%{name}/
+cp -p -a  {hardware,imagenes,ejemplos,locale,clemente} %{buildroot}%{_datadir}/%{name}/
 install -p -m 0644 {*.py,version} %{buildroot}%{_datadir}/%{name}/
 
 # Remove po and pot files
@@ -173,7 +173,7 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 
 #Imagenes
 %dir %{_datadir}/%{name}/imagenes
-%{_datadir}/%{name}/imagenes/*.png
+%{_datadir}/%{name}/imagenes/*
 
 %dir %{_datadir}/%{name}/clemente
 %{_datadir}/%{name}/clemente/*.py
@@ -196,7 +196,6 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %{_datadir}/%{name}/hardware/icaro/v4/ejemplos/*
 
 
-%{_datadir}/%{name}/imagenes/*.svg
 # Pinguino Firmware
 # Exception granted by fpc
 # For more details, see https://fedorahosted.org/fpc/ticket/253
