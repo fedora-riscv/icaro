@@ -80,7 +80,7 @@ chmod -v 0644 COPYING AUTHORS COPYING-LGPLv2
 # ------------- Icaro ---------------------------------------
 mkdir -p %{buildroot}%{_datadir}/%{name}/
 
-cp -p -a  {hardware,imagenes,locale,paletas,clemente} %{buildroot}%{_datadir}/%{name}/
+cp -p -a  {hardware,imagenes,locale,clemente} %{buildroot}%{_datadir}/%{name}/
 install -p -m 0644 {*.py,version} %{buildroot}%{_datadir}/%{name}/
 
 # Remove po and pot files
