@@ -165,8 +165,8 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 #%{_datadir}/%{name}/hardware/icaro/v2/componentes/*
 %dir %{_datadir}/%{name}/hardware/icaro/v4/componentes
 %{_datadir}/%{name}/hardware/icaro/v4/componentes/*
-
-
+# Samples
+# Demos 
 
 %dir %{_datadir}/%{name}/imagenes
 %{_datadir}/%{name}/imagenes/*.png
@@ -174,10 +174,9 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %dir %{_datadir}/%{name}/clemente
 %{_datadir}/%{name}/clemente/*.py
 
-
-
-%dir %{_datadir}/%{name}/paletas
-%{_datadir}/%{name}/paletas/*.gpl
+#Eliminando esto porque ya no existe
+#%dir %{_datadir}/%{name}/paletas
+#%{_datadir}/%{name}/paletas/*.gpl
 
 %dir %{_datadir}/%{name}/imagenes/componentes
 %{_datadir}/%{name}/imagenes/componentes/*.png
@@ -212,7 +211,6 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %{_datadir}/%{name}/hardware/icaro/v2/imagenes/gif/*.gif
 %{_datadir}/%{name}/hardware/icaro/v2/imagenes/*.png
 
-
 %dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16
 %dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lib
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes/*.png
@@ -242,7 +240,6 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %{_datadir}/%{name}/hardware/*.py
 %{_datadir}/%{name}/hardware/icaro/v2/modulos/*.py
 %{_datadir}/%{name}/hardware/icaro/v2/micro/conf/*.ini
-
 
 
 %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lkr/*.lkr
