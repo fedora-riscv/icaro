@@ -165,8 +165,10 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes/*
 %dir %{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes/*
-# Samples
-# Demos 
+# Samples and Demos complex
+%dir %{_datadir}/%{name}/ejemplos
+%{_datadir}/%{name}/ejemplos/*
+
 
 
 #Imagenes
@@ -180,13 +182,13 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %{_datadir}/%{name}/imagenes/main/*.png
 
 %dir %{_datadir}/%{name}/imagenes/mouse
-%{_datadir}/%{name}/imagenes/mouse/*.png
-%{_datadir}/%{name}/imagenes/mouse/*.svg
-%{_datadir}/%{name}/imagenes/gif/*.gif
+%{_datadir}/%{name}/imagenes/mouse/*.*
 
 %dir %{_datadir}/%{name}/hardware/icaro/
 %{_datadir}/%{name}/hardware/icaro/*
 
+
+#Samples by Firmware
 %dir %{_datadir}/%{name}/hardware/icaro/v2/ejemplos
 %{_datadir}/%{name}/hardware/icaro/v2/ejemplos/*
 
