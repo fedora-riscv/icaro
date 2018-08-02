@@ -281,7 +281,8 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %{python2_sitelib}/apicaro/
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/48x48/apps/icarologo.png
+#esto daba error, parece ser del menu 
+#%{_datadir}/icons/hicolor/48x48/apps/icarologo.png
 %config(noreplace) %{_sysconfdir}/udev/rules.d/icaro.rules
 
 %changelog
