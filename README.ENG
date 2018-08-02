@@ -1,55 +1,103 @@
-=== ABOUT ICARO ===
+Proyecto Icaro
+---------------
 
-Icaro is a software development project and free hardware for teaching of robotics in primary and secondary schools. It is a way of bringing transparent and simple fundamentals of robotics trying to simplify concepts for complex technical knowledge that teachers need to minimum work in the classroom.
+Creado por Valentin Bassel  / http://www.roboticaro.org 
+ 
 
-It consists of a number of software packages (specifically three parts) that work with hardware plates of inexpensive and manufacturing, allowing the research and design pedagogical of robots easily, recycling electronic components and using the characteristics of the various computer labs that can be found in schools. The main idea is to reach software of low requirements that can take advantage of any existing computer in a college or the notebooks of the OLPC project
 
-As we told them, this project consists of three parts:
+                         ____  ___    __    ____  _____ 
+                        (_  _)/ __)  /__\  (  _ \(  _  )
+                         _)(_( (__  /(__)\  )   / )(_)( 
+                        (____)\___)(__)(__)(_)\_)(_____)
+
+
+
+ACERCA DE
+----------
+
+ICARO es un proyecto de desarrollo de software y hardware libre para la ense-
+ñanza de robótica en colegios primarios y secundarios. Se trata de acercar de forma
+transparente y sencilla los fundamentos de la robótica tratando de simplificar conceptos
+técnicos complejos para que los docentes necesiten conocimientos mínimos para poder
+trabajar en el aula.
+
+Se compone de una serie de paquetes de software que trabajan con placas de hard-
+ware de bajo costo y fabricación, permitiendo investigar y diseñar pequeños robot pe-
+dagógicos de forma sencilla, reciclando componentes de electrónica y aprovechando
+las características de los distintos laboratorios de informática que se pueden encontrar
+en los colegios. La idea principal es lograr software de muy bajos requerimientos que
+pueda aprovechar cualquier tipo de computadora existente en un colegio o las netbooks
+del plan OLPC, CONECTAR IGUALDAD o cualquier otro plan provincial vigente.
 
 Tortucaro
-
-Is a TurtleArt?'s plugin that implements a set of primitives (basics blocks within LOGO) for generating an abstraction layer to read and send signals to the control plates. Leveraging the TurtleArt?'s primitives and adding the Tortucaro plugin, you can develop a robot that responds to the the signals serial port (or by a converter serial/usb as integrated ftl232) through an API programmed in python and PySerial?.
+------------
+Tortucaro es un Plugin para Turtleart que implementa una serie de primitivas (blo-
+ques básicos dentro de LOGO) que permiten generar una capa de abstracción para leer
+y mandar señales a las placas de control. Aprovechando las primitivas de TurtleArt y
+agregándole el plugin Tortucaro, se puede desarrollar un robot que responda a las se-
+ñales del puerto Serie (o mediante un conversor serie/usb como el integrado ftl232) a
+traves de una API programada en python y Pyserial.
 
 Icaro-Bloques
+--------------
+Con Tortucaro se puede trabajar conectado a la netbook y usando placas basadas
+en los integrados de Microchip PIC 16F628A2 (la gama más básica de PIC), aunque
+no permite el desarrollo de robots independientes de la netbook. Para poder traba-
+jar con microcontroladores con capacidad para tener un Bootloader (como los PICs
+18F45503 , 18F25504) se desarrolló ICARO-BLOQUES, un entorno gráfico muy simi-
+lar a TurtleArt, pero específico para generar código ANSI C para el compilador SDCC.
 
-icaro-bloques is based on all the work done by the PINGUINO project, a clone of ARDUINO but done with architecture PIC (18F2550). PINGUINO was written by Jean Mandom with the idea of ​​having a hardware based on PIC with ARDUINO boards support (based on ATMEL) and written entirely in Python. PINGUINO turn is based on the project VASCO-PUF that designed a bootloader and software to load.
+ICARO-BLOQUES está basado en todo el trabajo hecho para el proyecto PINGUINO,
+un clon de ARDUINO pero hecho con arquitectura de PIC (18F2550).
+
+PINGUINO fue escrito por Jean Mandom con la idea de poder tener un hardwa-
+re basado en PIC con compatibilidad con las placas ARDUINO (basadas en ATMEL)
+y escrito integramente en PYTHON. PINGUINO a su vez está basado en el proyecto
+VASCO-PUF que diseñó un bootloader y un software para carga del mismo. El integra-
+do PIC18F4550 utilizado en PINGUINO tiene varias características interesantes para
+su elección dentro del proyecto ICARO: es más barato que su equivalente en ATMEL,
+tiene integración USB por hardware, viene disponible en formato DIP (que facilita la
+fabricación de PCBs al no usar soldadura superficial), posee 40 pines de entrada/salida,
+PWM, 8 entradas analógicas (PORT-A), conexión serie, etc.
 
 Apicaro
+--------
+Apicaro es un modulo python para poder comunicar la placa Np05 mediante python-serial.
+Tiene las clases y funciones que permiten implementar un protocolo de transferencia 
+mediante python.
 
-Apicaro is a Python module to communicate to Np05 plate using python-serial. It has classes and functions to implement a transfer protocol using python. 
+Desarrollo
+-----------
+Valentin Basel  - valentinbasel@gmail.com
 
-#==============================================================================
-# Development
-#==============================================================================
-
-Valentin Basel - valentinbasel@gmail.com
-
-#==============================================================================
-# Contributors
-#==============================================================================
-
+Contribuciones
+--------------
 Neville A. Cross - yn1v@fedoraproject.org
 Lucas Costas - puixima@gmail.com
 Javier Castrillo - jcastrillo@educ.ar
 
-#==============================================================================
-# RPM Packaging
-#==============================================================================
-
-Yader Velásquez - yajosev@gmail.com
+Empaquetamiento RPM
+--------------------
 Eduardo Javier Echeverria Alvarado - echevemaster@gmail.com
+Yader Velásquez - yajosev@gmail.com
+Omar Berroterán Silva - omarberroteranlkf@gmail.com
 
-#==============================================================================
-# Graphic Design
-#==============================================================================
-
+Diseño gráfico
+----------------
 María Leandro - tatica@fedoraproject.org
 Mauro Paez - maureliopaez@gmail.com
 
-#===============================================================================
-# website
-#===============================================================================
+Diseño Web
+----------
+Aura Lila Gutiérrez Tejada, lilixx@fedoraproject.org
+
+Web
+-----
+http://roboticaro.org/
 
 http://sistema-icaro.blogspot.com.ar/
 
-https://github.com/valentinbasel/icaro-bloques
+https://github.com/valentinbasel/icaro
+
+
+-----------

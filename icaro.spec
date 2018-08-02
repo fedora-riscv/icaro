@@ -5,11 +5,11 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit 21e0b02f0bc3ed9e59d133e075787e2fa796c64d
+%global commit 457c425e635483bec320d23fa55a810350c9a9bc
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
-Version:	1.0.8
-Release:	8%{?dist}
+Version:	1.0.9
+Release:	2%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -295,6 +295,17 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
 
 %changelog
+* Wed Aug 01 2018 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.9
+- Changes to Apicaro to improve stability.
+- Changes all uDev to icaro.rules
+- Add new Blocks
+- Add Samples
+- Remove Obsolete scritplets
+- Changes Tortucaro
+- Bump to the new upstream version (April 10, 2017)
+- rebuilt
+
+
 * Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.8-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
