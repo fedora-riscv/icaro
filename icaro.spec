@@ -15,7 +15,6 @@ Summary:	Robotic Educational Project
 # Pinguino and puf is licensend under LGPLv2
 License:	GPLv3 and LGPLv2
 URL:		http://roboticaro.org
-#Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}/%{name}-%{commit}.tar.gz
 Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 
 # Add README in english
@@ -295,7 +294,6 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 - Changes Tortucaro
 - Bump to the new upstream version (April 10, 2017)
 - rebuilt
-
 
 * Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.8-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
