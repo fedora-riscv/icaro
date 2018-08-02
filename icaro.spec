@@ -168,18 +168,13 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 # Samples
 # Demos 
 
+
+#Imagenes
 %dir %{_datadir}/%{name}/imagenes
 %{_datadir}/%{name}/imagenes/*.png
 
 %dir %{_datadir}/%{name}/clemente
 %{_datadir}/%{name}/clemente/*.py
-
-#Eliminando esto porque ya no existe
-#%dir %{_datadir}/%{name}/paletas
-#%{_datadir}/%{name}/paletas/*.gpl
-#
-#%dir %{_datadir}/%{name}/imagenes/componentes
-#%{_datadir}/%{name}/imagenes/componentes/*.png
 
 %dir %{_datadir}/%{name}/imagenes/main
 %{_datadir}/%{name}/imagenes/main/*.png
@@ -286,11 +281,7 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/48x48/apps/icarologo.png
-%config(noreplace) %{_sysconfdir}/udev/rules.d/26-microchip.rules
-%config(noreplace) %{_sysconfdir}/udev/rules.d/41-microchip.rules
-%config(noreplace) %{_sysconfdir}/udev/rules.d/99-serial.rules
-%config(noreplace) %{_sysconfdir}/udev/rules.d/026-microchip.rules
-%config(noreplace) %{_sysconfdir}/udev/rules.d/99-mm-usb-device-blacklist.rules
+%config(noreplace) %{_sysconfdir}/udev/rules.d/icaro.rules
 
 %changelog
 * Wed Aug 01 2018 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.9
