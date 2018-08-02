@@ -161,10 +161,10 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/version
-#%dir %{_datadir}/%{name}/hardware/icaro/v2/componentes
-#%{_datadir}/%{name}/hardware/icaro/v2/componentes/*
-%dir %{_datadir}/%{name}/hardware/icaro/v4/componentes
-%{_datadir}/%{name}/hardware/icaro/v4/componentes/*
+%dir %{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes
+%{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes/*
+%dir %{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes
+%{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes/*
 # Samples
 # Demos 
 
@@ -177,9 +177,9 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 #Eliminando esto porque ya no existe
 #%dir %{_datadir}/%{name}/paletas
 #%{_datadir}/%{name}/paletas/*.gpl
-
-%dir %{_datadir}/%{name}/imagenes/componentes
-%{_datadir}/%{name}/imagenes/componentes/*.png
+#
+#%dir %{_datadir}/%{name}/imagenes/componentes
+#%{_datadir}/%{name}/imagenes/componentes/*.png
 
 %dir %{_datadir}/%{name}/imagenes/main
 %{_datadir}/%{name}/imagenes/main/*.png
@@ -204,6 +204,7 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 # Exception granted by fpc
 # For more details, see https://fedorahosted.org/fpc/ticket/253
 
+#Copyng images files
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16
 %dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lib
 %{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes/*.png
