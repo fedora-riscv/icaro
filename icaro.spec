@@ -118,7 +118,7 @@ install -p -m 0755 icaro %{buildroot}%{_bindir}/%{name}
 mkdir -p %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
 
 # Icon 
-install -p -D -m 0644 imagenes/icarologo.png  %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
+#install -p -D -m 0644 imagenes/icarologo.png  %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
 
 #create desktop file
 desktop-file-install \
