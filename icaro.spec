@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.9
-Release:	2%{?dist}
+Release:	1%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
