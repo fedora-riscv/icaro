@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name:		icaro
 Version:	1.0.9
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -285,6 +285,9 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %config(noreplace) %{_sysconfdir}/udev/rules.d/icaro.rules
 
 %changelog
+* Fri Feb 01 2019 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.9-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Wed Aug 01 2018 Omar Berroteran <omarberroteranlkf@gmail.com> - 1.0.9
 - Changes to Apicaro to improve stability.
 - Changes all uDev to icaro.rules
