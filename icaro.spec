@@ -5,50 +5,40 @@
 %global activity TurtleArt.activity
 %endif
 
-%global commit 457c425e635483bec320d23fa55a810350c9a9bc
+%global commit 7e5dca818e86870158292a1b212a1171129fed65
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-Name:		icaro
-Version:	1.0.9
-Release:	4%{?dist}
-Summary:	Robotic Educational Project
+Name: icaro
+Version: 2.0
+Release: 5%{?dist}
+Summary: Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
-License:	GPLv3 and LGPLv2
+License: GPLv3 and LGPLv2
 URL:		http://roboticaro.org
 Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
-ExclusiveArch: %{ix86} %{arm} x86_64 noarch
+ExclusiveArch: %{ix86} x86_64 noarch
+ExcludeArch:   s390 s390x ppc arm
 
-
-BuildRequires:	python2-devel
 BuildRequires:	desktop-file-utils
-BuildRequires:	sugar-toolkit
-Requires:	python2-cairo
-Requires:	pygtk2
-#Requires:	pywebkitgtk no compatibility Fedora 26+
-Requires:	pygtksourceview
+#BuildRequires:	sugar-toolkit
+
+#Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
-Requires:	python2-pyusb
-Requires:	python2-tools
-Requires:	sugar-turtleart
-Requires:	python2-pyserial
-Requires:	sugar
-#Requires:	hicolor-icon-themei
-#Requires:	gnome-python2-rsvg
+#Requires:	sugar-turtleart
+#Requires:	sugar
 Requires:	vte
-Requires:	python2-matplotlib
-#Requires:	gnome-python2-rsvg
 
 %description
 An educational robotic software aimed to develop robotic 
 and programming fundamentals.
 
 %prep
-%autosetup -n %{name}-%{commit}            
+%autosetup
 
 # sugar-turtleart change paths
 #%if 0%{?fedora} >= 18
@@ -73,7 +63,7 @@ chmod -v 0644 COPYING AUTHORS COPYING-LGPLv2
 %install
 # ------------- Apicaro -------------------------------------
 
-%{__python2} apicaro/setup.py install --root %{buildroot}
+#{__python3} apicaro/setup.py install --root %{buildroot}
 
 
 # ------------- Icaro ---------------------------------------
@@ -91,20 +81,19 @@ find %{buildroot} -name "#template.pde#" | xargs rm -f
 %find_lang %{name}
 
 # Tortucaro plugin for sugar
-mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/
-cp -a plugintortucaro/icaro/* %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/
-mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/icons
-cp -a plugintortucaro/icaro/icons/* %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/icons
+# NO more
+#mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/
+#cp -a plugintortucaro/icaro/* %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/
+#mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/icons
+#cp -a plugintortucaro/icaro/icons/* %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/icons
 #mkdir -p %{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/libreria
 #cp -a plugintortucaro/icaro/libreria/*%{buildroot}%{sugaractivitydir}/%{activity}/plugins/icaro/libreria
-
-
-
 
 mkdir -p %{buildroot}%{_sysconfdir}/udev/rules.d/
 install -p -m 0644  udev/* %{buildroot}%{_sysconfdir}/udev/rules.d/
 
 mkdir -p %{buildroot}%{_bindir}
+
 
 #create executable of program
 cat > icaro <<EOF
@@ -117,7 +106,7 @@ install -p -m 0755 icaro %{buildroot}%{_bindir}/%{name}
 mkdir -p %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
 
 # Icon 
-#install -p -D -m 0644 imagenes/icarologo.png  %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
+install -p -D -m 0644 imagenes/icarologo.png  %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
 
 #create desktop file
 desktop-file-install \
@@ -146,9 +135,9 @@ for file in `find %{buildroot}/%{python_sitelib}/%{name} -type f  ! -perm /a+x -
     chmod -vR a+x $file
 done
 
-for file in `find %{buildroot}/%{python_sitelib}/apicaro -type f  ! -perm /a+x -name '*.py'`; do
-    chmod -vR a+x $file
-done
+#for file in `find %{buildroot}/%{python_sitelib}/apicaro -type f  ! -perm /a+x -name '*.py'`; do
+#    chmod -vR a+x $file
+#done
 
 find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 
@@ -160,14 +149,11 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/version
-%dir %{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes
-%{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes/*
 %dir %{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes/*
 # Samples and Demos complex
 %dir %{_datadir}/%{name}/ejemplos
 %{_datadir}/%{name}/ejemplos/*
-
 
 
 #Imagenes
@@ -188,9 +174,6 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 
 
 #Samples by Firmware
-%dir %{_datadir}/%{name}/hardware/icaro/v2/ejemplos
-%{_datadir}/%{name}/hardware/icaro/v2/ejemplos/*
-
 %dir %{_datadir}/%{name}/hardware/icaro/v4/ejemplos
 %{_datadir}/%{name}/hardware/icaro/v4/ejemplos/*
 
@@ -200,13 +183,6 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 # For more details, see https://fedorahosted.org/fpc/ticket/253
 
 #Copyng images files
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lib
-%{_datadir}/%{name}/hardware/icaro/v2/imagenes/componentes/*.png
-
-%{_datadir}/%{name}/hardware/icaro/v2/imagenes/gif/*.gif
-%{_datadir}/%{name}/hardware/icaro/v2/imagenes/*.png
-
 %dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16
 %dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lib
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/componentes/*.png
@@ -214,77 +190,68 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/gif/*.gif
 %{_datadir}/%{name}/hardware/icaro/v4/imagenes/*.png
 
-
 # rpmlint complains for this file. arch-independent-package-contains-binary-or-object error
 # Really not intended as a file for be executed in Fedora host.
 
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lib/*.lib
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lkr
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib/*.h
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib/*.c
 
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/icaro_lib/*.h
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/icaro_lib/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/pilas/*.c
 
-
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/pilas/*.c
-
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/tortucaro/*.c
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/icaroblue/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/tortucaro/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/icaroblue/*.c
 
 
-%{_datadir}/%{name}/hardware/icaro/v2/*.py
+%{_datadir}/%{name}/hardware/icaro/v4/*.py
 
 %{_datadir}/%{name}/hardware/*.py
-%{_datadir}/%{name}/hardware/icaro/v2/modulos/*.py
-%{_datadir}/%{name}/hardware/icaro/v2/micro/conf/*.ini
+%{_datadir}/%{name}/hardware/icaro/v4/modulos/*.py
+%{_datadir}/%{name}/hardware/icaro/v4/micro/conf/*.ini
 
 
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/lkr/*.lkr
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/icaro_lib
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/*.c
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/source/*.pde
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/lkr/*.lkr
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/icaro_lib
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/source/*.pde
 
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/include/pic16
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/include/pic16/*.h
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/include/pic16
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/include/pic16/*.h
 
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/lib/pic16
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/non-free/lib/pic16/*.lib
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/lib/pic16
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/non-free/lib/pic16/*.lib
 
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/*.c
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/*.h
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/*.h
 
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb/*.c
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/usb/*.h
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb/*.c
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/usb/*.h
+
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/temporal/
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/tmp/stdout
+
+%dir %{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/obj
+%{_datadir}/%{name}/hardware/icaro/v4/micro/firmware/pic16/obj/*.o
 
 
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/temporal/
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/tmp/stdout
-
-%dir %{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/obj
-%{_datadir}/%{name}/hardware/icaro/v2/micro/firmware/pic16/obj/*.o
-
-
-# This is not sugar activity, is a plugin for turtleart
-# At present yet not there are Fedora guidelines for plugins.
-%dir %{sugaractivitydir}/%{activity}/plugins/icaro/
-%{sugaractivitydir}/%{activity}/plugins/icaro/*.py*
-
-%dir %{sugaractivitydir}/%{activity}/plugins/icaro/icons/
-%{sugaractivitydir}/%{activity}/plugins/icaro/icons/*.svg
-%dir %{sugaractivitydir}/%{activity}/plugins/icaro/libreria/
-%{sugaractivitydir}/%{activity}/plugins/icaro/libreria/*.py
-
-%{python2_sitelib}/apicaro*egg*
-%{python2_sitelib}/apicaro/
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
+
 #esto daba error, parece ser del menu 
-#%{_datadir}/icons/hicolor/48x48/apps/icarologo.png
+%{_datadir}/icons/hicolor/48x48/apps/icarologo.png
+
+
 %config(noreplace) %{_sysconfdir}/udev/rules.d/icaro.rules
 
 %changelog
+* Tue Sep 24 2019 Omar Berroteran <omarberroteranlkf@gmail.com> - 2.0
+- Remove python2 dependencies
+- Improve and bug fixes
+- remove sugar dependencies
+
+
 * Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.9-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
