@@ -20,12 +20,13 @@ Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
-ExclusiveArch: %{ix86} x86_64 #noarch
+ExclusiveArch: %{ix86} x86_64 noarch
 ExcludeArch:   s390 s390x ppc arm
 
 BuildRequires:	desktop-file-utils
+#BuildRequires:	sugar-toolkit
 
-Requires:	pygtksourceview
+#Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
 #Requires:	sugar-turtleart
@@ -62,7 +63,7 @@ chmod -v 0644 COPYING AUTHORS COPYING-LGPLv2
 %install
 # ------------- Apicaro -------------------------------------
 
-%{__python3} apicaro/setup.py install --root %{buildroot}
+#{__python3} apicaro/setup.py install --root %{buildroot}
 
 
 # ------------- Icaro ---------------------------------------
@@ -134,9 +135,9 @@ for file in `find %{buildroot}/%{python_sitelib}/%{name} -type f  ! -perm /a+x -
     chmod -vR a+x $file
 done
 
-for file in `find %{buildroot}/%{python_sitelib}/apicaro -type f  ! -perm /a+x -name '*.py'`; do
-    chmod -vR a+x $file
-done
+#for file in `find %{buildroot}/%{python_sitelib}/apicaro -type f  ! -perm /a+x -name '*.py'`; do
+#    chmod -vR a+x $file
+#done
 
 find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 
