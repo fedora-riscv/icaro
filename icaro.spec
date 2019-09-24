@@ -26,7 +26,7 @@ ExcludeArch:   s390 s390x ppc arm
 BuildRequires:	desktop-file-utils
 #BuildRequires:	sugar-toolkit
 
-Requires:	pygtksourceview
+#Requires:	pygtksourceview
 Requires:	sdcc
 Requires:	gputils
 #Requires:	sugar-turtleart
