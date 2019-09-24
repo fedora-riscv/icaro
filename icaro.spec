@@ -20,7 +20,7 @@ Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
-ExclusiveArch: %{ix86} x86_64 noarch
+ExclusiveArch: %{ix86} x86_64 #noarch
 ExcludeArch:   s390 s390x ppc arm
 
 BuildRequires:	desktop-file-utils
