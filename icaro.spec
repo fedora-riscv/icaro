@@ -9,7 +9,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 Name: icaro
 Version: 2.0
-Release: 12%{?dist}
+Release: 12.rv64%{?dist}
 Summary: Robotic Educational Project
 # Icaro is licensed under GPLv3
 # Pinguino and puf is licensend under LGPLv2
@@ -20,7 +20,7 @@ Source0:	https://github.com/valentinbasel/icaro/archive/%{commit}.tar.gz
 # Add README in english
 Source1:	README.ENG
 BuildArch:	noarch
-ExclusiveArch: %{ix86} x86_64 noarch
+ExclusiveArch: %{ix86} x86_64 riscv64 noarch
 ExcludeArch:   s390 s390x ppc arm
 
 BuildRequires:	desktop-file-utils
@@ -246,6 +246,9 @@ find %{buildroot}%{_datadir}/%{name} -name '__init__.py' | xargs chmod 0644
 %config(noreplace) %{_sysconfdir}/udev/rules.d/icaro.rules
 
 %changelog
+* Sat Aug 19 2023 Liu Yang <Yang.Liu.sn@gmail.com> - 2.0-12.rv64
+- Add riscv64.
+
 * Thu Jan 19 2023 Fedora Release Engineering <releng@fedoraproject.org> - 2.0-12
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_38_Mass_Rebuild
 
